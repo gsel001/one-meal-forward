@@ -18,6 +18,12 @@ OneMealForward is a free, open-source project making action against hunger acces
 
 **Launch status:** No food-relief organizations or food-distribution requests have been verified. Project tasks are not food assistance shifts. No meals served, people helped, partnerships, or community contributions are claimed. This project is not an emergency food assistance service. We do not collect applications for food aid or sensitive personal information.
 
+## First local food-security pilot — prospective, not yet partnered
+
+We're exploring practical support for the **Dearborn Community Food Pantry**, a real local monthly grocery distribution. The pantry has **not** contacted or authorized OneMealForward; there is no verified partner mission, guaranteed volunteer placement, or recorded field outcome.
+
+Volunteers can already help with public research and **unapproved** draft materials: [verify the public volunteer information](https://github.com/gsel001/one-meal-forward/issues/37), [prepare a staff-review handout](https://github.com/gsel001/one-meal-forward/issues/38), or [design a privacy-safe outcome checklist](https://github.com/gsel001/one-meal-forward/issues/39). Founder/coordinator consent is tracked in [issue #36](https://github.com/gsel001/one-meal-forward/issues/36). Read the [evidence and consent-first pilot plan](docs/pilots/dearborn-pantry/README.md) in the proposed documentation PR before attributing any work to the pantry.
+
 ## Start in under 10 minutes
 
 You can contribute without writing code. Pick one small task, check its acceptance criteria, and ask for help if needed. Our [first contribution guide](docs/first-contribution.md) walks through a browser-only documentation change. Researchers verify public sources; translators prepare reviewed language files; designers and testers improve access.
