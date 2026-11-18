@@ -33,3 +33,9 @@ The dependency-review workflow reviews new dependency vulnerabilities and allowe
 ## First partner checklist
 
 Follow verification.md; do not invite or message organizations on the founder's behalf without approval. A listing needs official public evidence, consent, reviewer, scope, safe contact route, and expiry. No field outcomes are assumed. Funding accounts, applications, purchases, and claims of charitable status remain unapproved.
+
+## Review and delivery queue
+
+The immediate constraint is reviewer capacity, not a shortage of proposed features. Start with issue #35 and the existing correctness/reliability PRs. Match a review to demonstrated skills and realistic availability; do not count a bot proposal or the author's own checks as independent approval. Keep main protected while recruitment continues.
+
+Record a reviewer decision and its reasoning on the existing PR. For organization work, use verification.md to track request authorization, scope, technical review, staff acceptance, actual use and outcome evidence separately. A task may stop at any gate. If the founder or authorized reviewer is unavailable, pause new organizational commitments and changes needing their approval; preserve the repository and explain the delay. Do not grant access as a workaround.
