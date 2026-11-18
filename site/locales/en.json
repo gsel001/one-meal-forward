@@ -1,0 +1,11 @@
+{
+  "brand": "OneMealForward",
+  "search": "Search missions",
+  "results": "missions match",
+  "empty": "No missions match these filters. Try another skill or clear your filters.",
+  "open": "View task on GitHub",
+  "verified": "Project task",
+  "pending": "Pending review",
+  "expired": "Expired",
+  "example": "Example only"
+}

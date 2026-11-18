@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community questions
+    url: https://github.com/gsel001/one-meal-forward/discussions
+    about: Ask beginner questions and propose ideas. Do not include personal information.
+  - name: Private security reporting
+    url: https://github.com/gsel001/one-meal-forward/security/advisories/new
+    about: Report vulnerabilities privately, never in a public issue.

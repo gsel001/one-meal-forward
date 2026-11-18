@@ -1,0 +1,482 @@
+[
+  {
+    "id": "project-1",
+    "title": "Write a plain-language mission submission walkthrough",
+    "description": "Explain each mission-form field with a clearly fictional example. explain public visibility and what never to submit. link the moderation policy.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Writing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/1",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/1",
+    "example": false
+  },
+  {
+    "id": "project-2",
+    "title": "Translate the interface into Spanish",
+    "description": "Translate every English key without changing placeholders. include translator review notes. register the locale only after a fluent reviewer approves it.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Translation",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/2",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/2",
+    "example": false
+  },
+  {
+    "id": "project-3",
+    "title": "Translate the interface into French",
+    "description": "Translate every English key. preserve placeholders. document a fluent reviewer and register the locale after review.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Translation",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/3",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/3",
+    "example": false
+  },
+  {
+    "id": "project-4",
+    "title": "Review the mission board with a screen reader",
+    "description": "Use NVDA or VoiceOver. record browser and versions. test filter labels, result announcements and card links. report reproducible findings without claiming certification.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Accessibility",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/4",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/4",
+    "example": false
+  },
+  {
+    "id": "project-5",
+    "title": "Test the site at 200% and 400% zoom",
+    "description": "Check navigation, filters and cards at both zoom levels. record viewport and browser. provide reproduction steps for any loss of content or functionality.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Accessibility",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/5",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/5",
+    "example": false
+  },
+  {
+    "id": "project-6",
+    "title": "Research official food-relief volunteer channels in Detroit",
+    "description": "Identify three official organization volunteer pages. cite dates and public evidence. distinguish general volunteer pages from open requests. do not add any partner or listing without consent.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Research",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/6",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/6",
+    "example": false
+  },
+  {
+    "id": "project-7",
+    "title": "Review mobile usability on a real Android device",
+    "description": "Record device, browser and viewport. complete filtering and clear-filter flows. document touch target or scrolling problems and concrete recommendations.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Design",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/7",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/7",
+    "example": false
+  },
+  {
+    "id": "project-8",
+    "title": "Review mobile usability on a real iPhone",
+    "description": "Record device and Safari version. test navigation, select controls and mission links. document any reproducible problems with proposed fixes.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Design",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/8",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/8",
+    "example": false
+  },
+  {
+    "id": "project-9",
+    "title": "Create a respectful language guide",
+    "description": "Suggest person-first language and five before/after examples. avoid stereotypes and promises of aid. cite two credible public style resources.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Writing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/9",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/9",
+    "example": false
+  },
+  {
+    "id": "project-10",
+    "title": "Review the beginner onboarding with a first-time contributor",
+    "description": "Walk through docs/first-contribution.md. record anonymized friction points with consent. propose at least two specific improvements without publishing participant details.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Writing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/10",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/10",
+    "example": false
+  },
+  {
+    "id": "project-11",
+    "title": "Draft an organization consent checklist",
+    "description": "Include authorization, public contact channel, expiration, correction and withdrawal. ensure consent cannot imply endorsement of the whole platform. link verification policy.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Research",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/11",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/11",
+    "example": false
+  },
+  {
+    "id": "project-12",
+    "title": "Document a low-bandwidth usability review",
+    "description": "Test with browser network throttling. record configuration and transferred bytes. confirm useful no-JavaScript fallback. propose evidence-based improvements.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Testing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/12",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/12",
+    "example": false
+  },
+  {
+    "id": "project-13",
+    "title": "Research right-to-left layout requirements",
+    "description": "Document logical CSS property gaps and bidi isolation needs. test a clearly labeled local pseudolocale without publishing an unreviewed translation. include screenshots and next steps.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Translation",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/13",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/13",
+    "example": false
+  },
+  {
+    "id": "project-14",
+    "title": "Design a printable volunteer onboarding handout",
+    "description": "Provide accessible text and an editable source. explain three non-code paths. include the repository URL. avoid unverified partners or impact claims.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Design",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/14",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/14",
+    "example": false
+  },
+  {
+    "id": "project-15",
+    "title": "Audit public link wording for clarity",
+    "description": "Inventory all visible website link text. check purpose without surrounding context. propose clearer wording and flag external destinations where helpful.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Accessibility",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/15",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/15",
+    "example": false
+  },
+  {
+    "id": "project-16",
+    "title": "Document privacy-safe issue examples",
+    "description": "Give six fictional examples contrasting safe public submissions with sensitive data to omit. explain redaction requests and Git history persistence.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Writing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/16",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/16",
+    "example": false
+  },
+  {
+    "id": "project-17",
+    "title": "Add tests for accented search terms",
+    "description": "Add accented and non-Latin fixtures and a documented matching policy. preserve existing filters. use synthetic data only. run npm test.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Testing",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/17",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/17",
+    "example": false
+  },
+  {
+    "id": "project-18",
+    "title": "Design a mission detail page prototype",
+    "description": "Include evidence, scope, expiry and next action. provide an accessible wireframe with keyboard order. label all example content as fictional.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Design",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/18",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/18",
+    "example": false
+  },
+  {
+    "id": "project-19",
+    "title": "Research volunteer safeguarding guidance",
+    "description": "Cite at least three official guidance sources with check dates. cover minors, in-person safety and local variation. recommend review questions without giving legal advice.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Research",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/19",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/19",
+    "example": false
+  },
+  {
+    "id": "project-20",
+    "title": "Document translation review and attribution",
+    "description": "Explain translator and fluent-reviewer roles, glossary conflicts, consent for public credit, stale strings and locale release requirements.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Translation",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/20",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/20",
+    "example": false
+  },
+  {
+    "id": "project-21",
+    "title": "Add a safe broken-link report template",
+    "description": "Collect public URL, expected destination and observed failure only. warn against personal information. validate form YAML and use existing labels.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Writing",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/21",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/21",
+    "example": false
+  },
+  {
+    "id": "project-22",
+    "title": "Review dependency update and license procedures",
+    "description": "Run npm audit and inspect direct dependency licenses. document review of transitive changes and immutable Action pins. report vulnerabilities privately.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Testing",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/22",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/22",
+    "example": false
+  },
+  {
+    "id": "project-23",
+    "title": "Research rural and offline volunteering barriers",
+    "description": "Cite three public sources. identify practical low-connectivity contribution paths. avoid collecting beneficiary stories or personal information.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Research",
+    "mode": "Online",
+    "effort": "1–2 hours",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/23",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/23",
+    "example": false
+  },
+  {
+    "id": "project-24",
+    "title": "Test the complete keyboard-only contribution journey",
+    "description": "Navigate from skip link through filters to a mission and contribution guide. check focus visibility and order. record browser and reproducible findings.",
+    "organization": "OneMealForward",
+    "kind": "project",
+    "location": "Worldwide",
+    "languages": [
+      "English"
+    ],
+    "skill": "Accessibility",
+    "mode": "Online",
+    "effort": "30–60 min",
+    "status": "verified",
+    "verifiedAt": "2026-11-18",
+    "expiresAt": "2027-02-16",
+    "url": "https://github.com/gsel001/one-meal-forward/issues/24",
+    "evidence": "https://github.com/gsel001/one-meal-forward/issues/24",
+    "example": false
+  }
+]

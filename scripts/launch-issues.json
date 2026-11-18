@@ -1,0 +1,266 @@
+[
+  {
+    "title": "Write a plain-language mission submission walkthrough",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "documentation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/mission-submission.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Explain each mission-form field with a clearly fictional example.\n- [ ] explain public visibility and what never to submit.\n- [ ] link the moderation policy.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Writing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Translate the interface into Spanish",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "translation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `site/locales/es.json` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Translate every English key without changing placeholders.\n- [ ] include translator review notes.\n- [ ] register the locale only after a fluent reviewer approves it.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Translation",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Translate the interface into French",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "translation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `site/locales/fr.json` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Translate every English key.\n- [ ] preserve placeholders.\n- [ ] document a fluent reviewer and register the locale after review.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Translation",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Review the mission board with a screen reader",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "accessibility"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/accessibility-audit.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Use NVDA or VoiceOver.\n- [ ] record browser and versions.\n- [ ] test filter labels, result announcements and card links.\n- [ ] report reproducible findings without claiming certification.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Accessibility",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Test the site at 200% and 400% zoom",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "accessibility"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/accessibility-audit.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Check navigation, filters and cards at both zoom levels.\n- [ ] record viewport and browser.\n- [ ] provide reproduction steps for any loss of content or functionality.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Accessibility",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Research official food-relief volunteer channels in Detroit",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "research"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/research/detroit.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Identify three official organization volunteer pages.\n- [ ] cite dates and public evidence.\n- [ ] distinguish general volunteer pages from open requests.\n- [ ] do not add any partner or listing without consent.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Research",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Review mobile usability on a real Android device",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "design"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/mobile-review.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Record device, browser and viewport.\n- [ ] complete filtering and clear-filter flows.\n- [ ] document touch target or scrolling problems and concrete recommendations.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Design",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Review mobile usability on a real iPhone",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "design"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/mobile-review.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Record device and Safari version.\n- [ ] test navigation, select controls and mission links.\n- [ ] document any reproducible problems with proposed fixes.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Design",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Create a respectful language guide",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "documentation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/language-guide.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Suggest person-first language and five before/after examples.\n- [ ] avoid stereotypes and promises of aid.\n- [ ] cite two credible public style resources.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Writing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Review the beginner onboarding with a first-time contributor",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "documentation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/onboarding-feedback.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Walk through docs/first-contribution.md.\n- [ ] record anonymized friction points with consent.\n- [ ] propose at least two specific improvements without publishing participant details.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Writing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Draft an organization consent checklist",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "research"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/organization-consent.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Include authorization, public contact channel, expiration, correction and withdrawal.\n- [ ] ensure consent cannot imply endorsement of the whole platform.\n- [ ] link verification policy.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Research",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Document a low-bandwidth usability review",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "enhancement"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/performance-review.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Test with browser network throttling.\n- [ ] record configuration and transferred bytes.\n- [ ] confirm useful no-JavaScript fallback.\n- [ ] propose evidence-based improvements.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Testing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Research right-to-left layout requirements",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "translation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/rtl-plan.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Document logical CSS property gaps and bidi isolation needs.\n- [ ] test a clearly labeled local pseudolocale without publishing an unreviewed translation.\n- [ ] include screenshots and next steps.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Translation",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Design a printable volunteer onboarding handout",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "design"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/volunteer-handout.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Provide accessible text and an editable source.\n- [ ] explain three non-code paths.\n- [ ] include the repository URL.\n- [ ] avoid unverified partners or impact claims.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Design",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Audit public link wording for clarity",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "accessibility"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/link-audit.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Inventory all visible website link text.\n- [ ] check purpose without surrounding context.\n- [ ] propose clearer wording and flag external destinations where helpful.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Accessibility",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Document privacy-safe issue examples",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "security"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/privacy-examples.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Give six fictional examples contrasting safe public submissions with sensitive data to omit.\n- [ ] explain redaction requests and Git history persistence.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Writing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Add tests for accented search terms",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "enhancement"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `tests/filters.test.js` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Add accented and non-Latin fixtures and a documented matching policy.\n- [ ] preserve existing filters.\n- [ ] use synthetic data only.\n- [ ] run npm test.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Testing",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Design a mission detail page prototype",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "design"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/design/mission-detail.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Include evidence, scope, expiry and next action.\n- [ ] provide an accessible wireframe with keyboard order.\n- [ ] label all example content as fictional.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Design",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Research volunteer safeguarding guidance",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "research"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/research/safeguarding.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Cite at least three official guidance sources with check dates.\n- [ ] cover minors, in-person safety and local variation.\n- [ ] recommend review questions without giving legal advice.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Research",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Document translation review and attribution",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "translation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/translation-review.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Explain translator and fluent-reviewer roles, glossary conflicts, consent for public credit, stale strings and locale release requirements.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Translation",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Add a safe broken-link report template",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "documentation"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `.github/ISSUE_TEMPLATE/broken-link.yml` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Collect public URL, expected destination and observed failure only.\n- [ ] warn against personal information.\n- [ ] validate form YAML and use existing labels.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Writing",
+    "effort": "30–60 min"
+  },
+  {
+    "title": "Review dependency update and license procedures",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "security"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/dependency-review.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Run npm audit and inspect direct dependency licenses.\n- [ ] document review of transitive changes and immutable Action pins.\n- [ ] report vulnerabilities privately.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Testing",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Research rural and offline volunteering barriers",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "research"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/research/offline-access.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Cite three public sources.\n- [ ] identify practical low-connectivity contribution paths.\n- [ ] avoid collecting beneficiary stories or personal information.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n1–2 hours. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Research",
+    "effort": "1–2 hours"
+  },
+  {
+    "title": "Test the complete keyboard-only contribution journey",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "accessibility"
+    ],
+    "body": "## Why this matters\nHelp make trustworthy hunger-relief collaboration accessible to everyone. This is a real OneMealForward project task, not a food assistance request.\n\n## Start here\nRead [the 10-minute guide](https://github.com/gsel001/one-meal-forward/blob/main/docs/first-contribution.md) and CONTRIBUTING.md. Work in `docs/accessibility-audit.md` (create it if needed). No prior project experience is required. Ask for help in this issue before starting if anything is unclear.\n\n## Acceptance criteria\n- [ ] Navigate from skip link through filters to a mission and contribution guide.\n- [ ] check focus visibility and order.\n- [ ] record browser and reproducible findings.\n\n- [ ] Submit your work as a pull request linking this issue; do not publish personal information.\n\n## Estimated effort\n30–60 min. This is a suggestion, not a deadline. No programming is needed for research, writing, translation, and manual-review tasks. Maintainer review is required before publication.",
+    "skill": "Accessibility",
+    "effort": "30–60 min"
+  }
+]

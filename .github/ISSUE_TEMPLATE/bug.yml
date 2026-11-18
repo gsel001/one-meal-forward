@@ -1,0 +1,19 @@
+name: Website bug
+description: Report a reproducible problem without personal information.
+labels: [bug]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior, and actual behavior
+      description: Use synthetic examples. Do not paste secrets or personal information.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser, device, and viewport
+  - type: textarea
+    id: access
+    attributes:
+      label: Accessibility impact and safe supporting evidence

@@ -1,0 +1,16 @@
+name: Propose a contribution task
+description: Suggest a useful, achievable improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Who benefits and what should improve?
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria and suggested starting files
+    validations:
+      required: true
