@@ -1,4 +1,5 @@
 import { filterMissions, effectiveStatus, safeUrl, reviewedContributions } from './filters.js';
+import { FILTER_KEYS, readSharedFilters, createShareableQuery } from './search-state.js';
 const grid = document.querySelector('#mission-grid');
 const count = document.querySelector('#result-count');
 const empty = document.querySelector('#empty');
@@ -37,6 +38,18 @@ try {
   const responses = await Promise.all(['./data/missions.json', './locales/en.json', './data/impact.json'].map(path => fetch(path)));
   if (responses.some(r => !r.ok)) throw new Error('Unable to load mission data');
   const [missions, strings, impact] = await Promise.all(responses.map(r => r.json()));
+  const allowed = Object.fromEntries(FILTER_KEYS.filter(key => key !== 'search')
+    .map(key => [key, Array.from(form.elements.namedItem(key).options, option => option.value)]));
+  function restoreFilters() {
+    const shared = readSharedFilters(window.location.search, allowed);
+    for (const key of FILTER_KEYS) form.elements.namedItem(key).value = shared[key] ?? '';
+  }
+  function saveFilters() {
+    const query = createShareableQuery(Object.fromEntries(new FormData(form)));
+    const address = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
+    window.history.replaceState(null, '', address);
+  }
+  restoreFilters();
   let limit = 6;
   const more = element('button', 'Show more missions', 'button show-more'); more.type = 'button';
   grid.after(more);
@@ -47,8 +60,12 @@ try {
     empty.hidden = filtered.length > 0; empty.textContent = strings.empty; more.hidden = filtered.length <= limit;
   }
   form.addEventListener('submit', e => e.preventDefault());
-  form.addEventListener('input', () => { limit = 6; render(); });
-  form.addEventListener('reset', () => { limit = 6; setTimeout(render, 0); });
+  form.addEventListener('input', () => { limit = 6; render(); saveFilters(); });
+  form.addEventListener('reset', () => {
+    limit = 6;
+    setTimeout(() => { render(); saveFilters(); }, 0);
+  });
+  window.addEventListener('popstate', () => { restoreFilters(); limit = 6; render(); });
   more.addEventListener('click', () => { const previous = limit; limit += 6; render(); const first = grid.children[previous]?.querySelector('a'); first?.focus(); });
   render();
   document.querySelector('#contribution-count').textContent = reviewedContributions(impact).length;
