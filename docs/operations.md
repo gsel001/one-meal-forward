@@ -41,6 +41,8 @@ The launch helper (scripts/configure-github.py) is **not a maintenance
 or synchronization tool**. Running it without arguments performs a local
 no-op and makes no network calls. It requires an explicit --apply switch
 and verifies the authenticated GitHub owner for first-time initialization.
+It creates only issue scaffolding and an empty mission catalogue; genuine tasks
+require a reviewed PR and must not inherit invented verification dates.
 If site/data/missions.json already exists, it refuses to alter GitHub or
 rewrite the data file. It also uses an exclusive-create operation to
 prevent accidental overwrite. Never delete live mission records to rerun it.
