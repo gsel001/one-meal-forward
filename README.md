@@ -2,7 +2,7 @@
 
 **Small actions. A world with less hunger.**
 
-OneMealForward is a free, open-source project making action against hunger accessible to anyone, anywhere—regardless of coding experience, financial resources, or language.
+OneMealForward prepares free volunteer technical help for food-relief organizations. The current website lists project tasks in writing, translation, research, design, accessibility, and development. Organization requests require review before publication or work authorization.
 
 [Explore the mission board](https://gsel001.github.io/one-meal-forward/) · [Find your first task](https://github.com/gsel001/one-meal-forward/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · [Join the community](https://github.com/gsel001/one-meal-forward/discussions)
 
