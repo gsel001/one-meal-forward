@@ -1,6 +1,6 @@
 # OneMealForward ↗
 
-**Small actions. A world with less hunger.**
+**Volunteer technical help for food-relief organizations.**
 
 OneMealForward prepares free volunteer technical help for food-relief organizations. The current website lists project tasks in writing, translation, research, design, accessibility, and development. Organization requests require review before publication or work authorization.
 
@@ -18,9 +18,12 @@ OneMealForward prepares free volunteer technical help for food-relief organizati
 
 **Launch status:** No food-relief organizations or food-distribution requests have been verified. Project tasks are not food assistance shifts. No meals served, people helped, partnerships, or community contributions are claimed. This project is not an emergency food assistance service. We do not collect applications for food aid or sensitive personal information.
 
-## Start in under 10 minutes
+## Choose a contribution path
 
-You can contribute without writing code. Pick one small task, check its acceptance criteria, and ask for help if needed. Our [first contribution guide](docs/first-contribution.md) walks through a browser-only documentation change. Researchers verify public sources; translators prepare reviewed language files; designers and testers improve access.
+**No coding experience required to contribute.** A free GitHub account is required to submit work; reading tasks needs no account.
+
+- **I don't code:** read the [browser-only contribution guide](docs/first-contribution.md), choose a writing, research, translation or feedback task, and post findings in the existing issue's comments. No terminal, fork or PR is required. Maintainers can prepare changes from accepted submissions with attribution.
+- **I'm a developer:** inspect existing PRs and [CONTRIBUTING.md](CONTRIBUTING.md), coordinate on a task, and submit or review a focused change with tests. [Reviewer recruitment #35](https://github.com/gsel001/one-meal-forward/issues/35) is the immediate technical need. A public trial review does not grant write access or replace code-owner approval.
 
 Food-relief organizations can [suggest a mission](https://github.com/gsel001/one-meal-forward/issues/new?template=mission.yml). Submitting a request does not publish a listing, establish a partnership, or imply endorsement. A maintainer reviews consent, evidence, safeguarding, and expiration before a listing is accepted.
 

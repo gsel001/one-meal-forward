@@ -1,10 +1,10 @@
 # Contributing
 
-Every useful skill belongs here. Read our [10-minute guide](docs/first-contribution.md), choose a `good first issue`, and check for someone already working on it. Comment on the issue to coordinate; no assignment is required to propose a change. Maintainers are volunteers and response times vary.
+No coding experience required to contribute. Read our [10-minute guide](docs/first-contribution.md), choose a `good first issue`, and check for someone already working on it. Comment on the issue to coordinate; no assignment is required to propose a change. Maintainers are volunteers and response times vary.
 
 ## Ways to help
 
-Write clearer instructions, translate, verify public resources, test with assistive technology, review mobile layouts, or improve the code. GitHub Issues accepts evidence and suggestions; a pull request is the preferred way to deliver files. No programming experience is needed for research and documentation work.
+Write clearer instructions, translate, verify public resources, test with assistive technology, review mobile layouts, or improve the code. For nontechnical work, share findings, drafted text or translations in the existing issue’s comments. You need a free GitHub account, but no installation, fork or pull request. A maintainer can prepare repository changes from accepted submissions and preserve attribution. Code changes follow the pull-request process below.
 
 ## Pull requests
 
