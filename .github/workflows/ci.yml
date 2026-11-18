@@ -23,8 +23,14 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
+      - run: python3 -m venv .venv
+      - run: .venv/bin/python -m pip install -r requirements-dev.txt
+      - run: npm run format:check
+      - run: .venv/bin/python -m ruff format --check scripts tests
+      - run: npm run lint
       - run: npm audit --audit-level=high
       - run: npm test
+      - run: npm run test:python
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
