@@ -1,6 +1,9 @@
+export function expiryTime(mission) {
+  return Date.parse(`${mission.expiresAt}T00:00:00Z`) + 86400000;
+}
 export function effectiveStatus(mission, now = new Date()) {
   if (mission.example) return 'example';
-  if (mission.expiresAt && new Date(`${mission.expiresAt}T23:59:59Z`) < now) return 'expired';
+  if (now.getTime() >= expiryTime(mission)) return 'expired';
   return mission.status;
 }
 export function filterMissions(missions, filters, now = new Date()) {
