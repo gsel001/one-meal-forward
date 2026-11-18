@@ -18,3 +18,19 @@ test('keyboard skip link, safe search and load error fallback',async({page})=>{
  await page.route('**/data/missions.json',route=>route.abort());await page.reload();await expect(page.locator('#result-count')).toContainText('could not be loaded');await expect(page.locator('#empty a')).toHaveAttribute('href',/github.com/);
 });
 test('JavaScript-free fallback',async({browser})=>{const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://127.0.0.1:4173');await expect(page.getByRole('link',{name:'browse all beginner tasks on GitHub'})).toBeVisible();await context.close();});
+
+
+test('a filtered mission link can be shared, reloaded, and cleared', async ({ page }) => {
+  await page.goto('/?skill=Translation&search=Spanish');
+  await expect(page.locator('.mission-card')).toHaveCount(1);
+  await expect(page.getByLabel('Your skill')).toHaveValue('Translation');
+  await page.getByLabel('Search missions', { exact: true }).fill('French');
+  await expect(page.locator('.mission-card')).toHaveCount(1);
+  await expect(page).toHaveURL(/search=French/);
+  await page.reload();
+  await expect(page.getByLabel('Search missions', { exact: true })).toHaveValue('French');
+  await expect(page.locator('.mission-card')).toHaveCount(1);
+  await page.getByRole('button', { name: 'Clear filters' }).click();
+  await expect(page).not.toHaveURL(/search=|skill=/);
+  await expect(page.locator('.mission-card')).toHaveCount(6);
+});
