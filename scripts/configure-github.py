@@ -73,6 +73,13 @@ def main(argv=None):
     if not isinstance(tasks, list) or not tasks:
         parser.error("Launch task manifest must be a nonempty list.")
 
+    # Public issue titles and contents are not proof of provenance or review.
+    # Never adopt existing issues, even if they appear to match launch tasks.
+    # One result is enough to reject a nonempty repository; no pagination needed.
+    if api("repos/" + REPO + "/issues?state=all&per_page=1"):
+        parser.error("Repository already has issues or pull requests. "
+                     "No changes made; use reviewed pull requests for maintenance.")
+
     existing_labels = {label["name"] for label in api("repos/" + REPO + "/labels?per_page=100")}
     for name, color in LABELS.items():
         if name not in existing_labels:
@@ -87,18 +94,11 @@ def main(argv=None):
             }))
     milestone_id = next(m["number"] for m in milestones if m["title"] == "Community launch")
 
-    existing_issues = {
-        issue["title"]: issue
-        for issue in api("repos/" + REPO + "/issues?state=all&per_page=100")
-        if "pull_request" not in issue
-    }
     for task in tasks:
-        issue = existing_issues.get(task["title"])
-        if issue is None:
-            api("repos/" + REPO + "/issues", "POST", {
-                "title": task["title"], "body": task["body"],
-                "labels": task["labels"], "milestone": milestone_id
-            })
+        api("repos/" + REPO + "/issues", "POST", {
+            "title": task["title"], "body": task["body"],
+            "labels": task["labels"], "milestone": milestone_id
+        })
 
     # Issue creation is not verification. Never fabricate review dates or
     # automatically publish tasks; a maintainer must review additions via PR.
