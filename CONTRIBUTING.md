@@ -6,6 +6,10 @@ No coding experience required to contribute. Read our [10-minute guide](docs/fir
 
 Write clearer instructions, translate, verify public resources, test with assistive technology, review mobile layouts, or improve the code. For nontechnical work, share findings, drafted text or translations in the existing issue’s comments. You need a free GitHub account, but no installation, fork or pull request. A maintainer can prepare repository changes from accepted submissions and preserve attribution. Code changes follow the pull-request process below.
 
+## Questions and coordination
+
+Ask in [Discord](https://discord.gg/8hEQ6sJA2), [GitHub Discussions](https://github.com/gsel001/one-meal-forward/discussions) or the relevant issue. Discord is optional and requires a Discord account. Record submissions, decisions and permissions in the issue or PR so contributors can follow the work without joining chat. The code of conduct applies in Discord too. Do not post personal information or confidential records there; report vulnerabilities through [SECURITY.md](SECURITY.md).
+
 ## Pull requests
 
 Fork the repository, make a focused change, describe its purpose, and link its issue. Include sources and check dates for factual claims. Run `npm test` and `npm run build` for code or data changes, and browser tests for interface changes. Screenshots may help design review; do not include identifiable people or private information. Maintainer review is required. Do not add a partner, donation destination, or impact claim without verification.

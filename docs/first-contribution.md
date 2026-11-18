@@ -29,4 +29,4 @@ A submitted comment is not automatically accepted work. Keep replying in the sam
 
 Code changes still need a PR, tests and an authorized independent review. If you want that path, read [CONTRIBUTING.md](../CONTRIBUTING.md). If a task involves code and you only have nontechnical feedback, a useful issue comment is welcome; the code implementation remains separate.
 
-[Ask a question in Discussions](https://github.com/gsel001/one-meal-forward/discussions) or in the task itself. Never pay to contribute.
+[Ask a question in Discord](https://discord.gg/8hEQ6sJA2), [Discussions](https://github.com/gsel001/one-meal-forward/discussions) or in the task itself. Discord is optional and requires a separate account; keep submissions and decisions in the GitHub task. Do not share personal information or private records in chat. Never pay to contribute.

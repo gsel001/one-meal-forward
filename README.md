@@ -4,7 +4,7 @@
 
 OneMealForward prepares free volunteer technical help for food-relief organizations. The current website lists project tasks in writing, translation, research, design, accessibility, and development. Organization requests require review before publication or work authorization.
 
-[Explore the mission board](https://gsel001.github.io/one-meal-forward/) · [Find your first task](https://github.com/gsel001/one-meal-forward/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · [Join the community](https://github.com/gsel001/one-meal-forward/discussions)
+[Explore the mission board](https://gsel001.github.io/one-meal-forward/) · [Find your first task](https://github.com/gsel001/one-meal-forward/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · [Join Discord](https://discord.gg/8hEQ6sJA2) · [GitHub Discussions](https://github.com/gsel001/one-meal-forward/discussions)
 
 ## What works today
 
@@ -26,6 +26,10 @@ OneMealForward prepares free volunteer technical help for food-relief organizati
 - **I'm a developer:** inspect existing PRs and [CONTRIBUTING.md](CONTRIBUTING.md), coordinate on a task, and submit or review a focused change with tests. [Reviewer recruitment #35](https://github.com/gsel001/one-meal-forward/issues/35) is the immediate technical need. A public trial review does not grant write access or replace code-owner approval.
 
 Food-relief organizations can [suggest a mission](https://github.com/gsel001/one-meal-forward/issues/new?template=mission.yml). Submitting a request does not publish a listing, establish a partnership, or imply endorsement. A maintainer reviews consent, evidence, safeguarding, and expiration before a listing is accepted.
+
+## Community chat
+
+[Join OneMealForward on Discord](https://discord.gg/8hEQ6sJA2) to ask questions or discuss tasks. Discord is optional and requires a Discord account. Keep task submissions, review decisions and authorization records in GitHub issues or pull requests. Follow the [code of conduct](CODE_OF_CONDUCT.md); do not share personal information, private organization records or security reports in chat.
 
 ## Run locally
 
