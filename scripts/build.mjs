@@ -1,5 +1,6 @@
 import { cp, mkdir, rm, readFile, readdir } from 'node:fs/promises';
 import { safeUrl } from '../site/filters.js';
+import { validateImpactLedger } from '../site/impact.js';
 const missions = JSON.parse(await readFile('site/data/missions.json', 'utf8'));
 const ids = new Set();
 for (const m of missions) {
@@ -13,6 +14,8 @@ for (const m of missions) {
   if (m.kind === 'organization' && m.status === 'verified' && (!safeUrl(m.consentEvidence) || !m.reviewer)) throw new Error('Verified organizations need consent and reviewer');
   if (m.kind === 'project' && (m.organization !== 'OneMealForward' || !m.url.startsWith('https://github.com/gsel001/one-meal-forward/issues/'))) throw new Error('Project task must link to this project');
 }
+const impact = JSON.parse(await readFile('site/data/impact.json', 'utf8'));
+validateImpactLedger(impact);
 const english = JSON.parse(await readFile('site/locales/en.json', 'utf8'));
 for (const file of await readdir('site/locales')) {
  if (!file.endsWith('.json') || file === 'registry.json') continue;
