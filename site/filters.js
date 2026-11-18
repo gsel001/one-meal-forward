@@ -3,11 +3,14 @@ export function effectiveStatus(mission, now = new Date()) {
   if (mission.expiresAt && new Date(`${mission.expiresAt}T23:59:59Z`) < now) return 'expired';
   return mission.status;
 }
+function normalizeSearch(value) {
+  return String(value || '').normalize('NFKD').replace(/\p{M}/gu, '').trim().toLocaleLowerCase();
+}
 export function filterMissions(missions, filters, now = new Date()) {
-  const query = (filters.search || '').trim().toLocaleLowerCase();
+  const query = normalizeSearch(filters.search);
   return missions.filter(m => {
     if (m.example) return false;
-    const haystack = [m.title, m.description, m.organization, m.skill, m.location].join(' ').toLocaleLowerCase();
+    const haystack = normalizeSearch([m.title, m.description, m.organization, m.skill, m.location, m.mode, ...m.languages].join(' '));
     return (!query || haystack.includes(query)) &&
       (!filters.skill || m.skill === filters.skill) &&
       (!filters.location || m.location === filters.location) &&
