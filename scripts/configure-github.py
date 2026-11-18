@@ -92,37 +92,23 @@ def main(argv=None):
         for issue in api("repos/" + REPO + "/issues?state=all&per_page=100")
         if "pull_request" not in issue
     }
-    missions = []
     for task in tasks:
         issue = existing_issues.get(task["title"])
         if issue is None:
-            issue = api("repos/" + REPO + "/issues", "POST", {
+            api("repos/" + REPO + "/issues", "POST", {
                 "title": task["title"], "body": task["body"],
                 "labels": task["labels"], "milestone": milestone_id
             })
-        criteria = task["body"].split("## Acceptance criteria\n", 1)
-        if len(criteria) != 2:
-            raise ValueError("Launch task lacks acceptance criteria: " + task["title"])
-        description = criteria[1].split("\n\n", 1)[0].replace("- [ ] ", "").replace("\n", " ")
-        missions.append({
-            "id": "project-" + str(issue["number"]),
-            "title": task["title"], "description": description,
-            "organization": "OneMealForward", "kind": "project",
-            "location": "Worldwide", "languages": ["English"],
-            "skill": task["skill"], "mode": "Online", "effort": task["effort"],
-            "status": "verified", "verifiedAt": "2026-11-18",
-            "expiresAt": "2027-02-16", "url": issue["html_url"],
-            "evidence": issue["html_url"], "example": False
-        })
 
-    # x prevents overwriting even if a manifest appears while the script is running.
+    # Issue creation is not verification. Never fabricate review dates or
+    # automatically publish tasks; a maintainer must review additions via PR.
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     with MANIFEST.open("x", encoding="utf-8") as output:
-        json.dump(missions, output, indent=2, ensure_ascii=False)
+        json.dump([], output, indent=2)
         output.write("\n")
-    print("One-time bootstrap completed; review generated records before committing.")
+    print("One-time setup completed; mission board starts empty. "
+          "Add reviewed tasks through pull requests, not bootstrap.")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
