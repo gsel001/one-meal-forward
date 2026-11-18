@@ -33,3 +33,25 @@ The dependency-review workflow reviews new dependency vulnerabilities and allowe
 ## First partner checklist
 
 Follow verification.md; do not invite or message organizations on the founder's behalf without approval. A listing needs official public evidence, consent, reviewer, scope, safe contact route, and expiry. No field outcomes are assumed. Funding accounts, applications, purchases, and claims of charitable status remain unapproved.
+
+
+## One-time setup safety and recovery
+
+The launch helper (scripts/configure-github.py) is **not a maintenance
+or synchronization tool**. Running it without arguments performs a local
+no-op and makes no network calls. It requires an explicit --apply switch
+and verifies the authenticated GitHub owner for first-time initialization.
+If site/data/missions.json already exists, it refuses to alter GitHub or
+rewrite the data file. It also uses an exclusive-create operation to
+prevent accidental overwrite. Never delete live mission records to rerun it.
+
+For disaster recovery, restore code and records from reviewed Git history
+or a verified independent export; do not rerun bootstrap to regenerate
+the active catalogue. Rebuild locally with npm ci --ignore-scripts,
+npm test, and npm run build, and publish only through the protected main
+branch after review. Reconfirm partner permissions and expiry dates before
+republishing any recovered organization listing. A backup of repository code
+is not a backup of deleted external GitHub discussions or issues.
+
+The bootstrap safety behavior is checked in CI using Python's standard
+library (tests/test_bootstrap.py); no pip packages are installed.
