@@ -8,6 +8,10 @@
     "node": ">=22"
   },
   "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:python": "python3 -m ruff format scripts tests",
+    "format:python:check": "python3 -m ruff format --check scripts tests",
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.js",
     "test:browser": "playwright test",
@@ -16,6 +20,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
-    "@playwright/test": "^1.65.1"
+    "@playwright/test": "^1.65.1",
+    "prettier": "3.10.1"
   }
 }
