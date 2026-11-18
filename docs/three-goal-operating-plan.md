@@ -10,9 +10,9 @@ OneMealForward can coordinate public project tasks and review organization reque
 | --- | --- |
 | Deployed | Static English mission board; search and six filters; moderated issue intake; review/expiry labels; empty impact ledger; no runtime account, tracking, database or payment service. [Main commit](https://github.com/gsel001/one-meal-forward/commit/f0d280c105baaf228bba7f402e5d148a5b7ce42e) and [website](https://gsel001.github.io/one-meal-forward/). |
 | Checks | Local baseline: 9 unit/repository checks and 8 desktop/mobile browser/accessibility tests passed. Automated checks do not establish full accessibility compliance or independent review. |
-| Proposed, not shipped | All 12 PRs were open, including pilot #40, Project guide #41 and this strategy #42; three were drafts. The latest PR checks passed, but no approving reviews were recorded. Main still contained the launch commit. |
+| Proposed, not shipped | At the master-prompt audit, all 15 PRs were open, including pilot #40, Project guide #41, this strategy #42 and changes #44–#46; two were drafts. The latest PR checks passed, but no approving reviews were recorded. Main still contained the launch commit. |
 | Review capacity | Only `gsel001` had repository access; [#35](https://github.com/gsel001/one-meal-forward/issues/35) recruits a reviewer. All 30 issues were unassigned. Protected main requires tests, code-owner review and an approval; no bypass actor exists. |
-| Coordination | [Mission Control](https://github.com/users/gsel001/projects/1) is public with eight views and native intake/status workflows. It had 42 items before this work. Project statuses do not certify organization outcomes. |
+| Coordination | [Mission Control](https://github.com/users/gsel001/projects/1) is public with eight views and native intake/status workflows. It had 45 items at the master-prompt audit. Project statuses do not certify organization outcomes. |
 | Humanitarian results | No authorized request, staff-accepted deliverable, confirmed use or field outcome is recorded. The [impact ledger](../site/data/impact.json) is empty. Pantry #36 and TechSoup #43 remain prospective/research work. |
 | Funding | No payment destination or fundraising account is configured in this repository. No income or grant award is claimed. Personal finances and account eligibility have not been audited. |
 
@@ -70,6 +70,14 @@ Recruitment steps:
 3. Evaluate a trial review for source inspection, reproducible checks, security and privacy judgment, license awareness, maintenance cost and a clear explanation. Ask what was personally checked and what tools assisted it. Do not accept a generic approval as evidence of those checks.
 4. If both sides want to continue, document responsibilities, availability and least-privilege access. Any code-owner change remains subject to review. A comment from a volunteer without the required permission does not satisfy branch protection.
 5. If no reviewer qualifies, leave PRs open and pause new technical commitments. Do not weaken protection or count the author's AI-assisted work as independent review.
+
+### Reviewer onboarding and departure
+
+Decision: improve the existing role procedure. Review capacity is missing, and neither access nor approval quality follows from a volunteer's title. The trial must demonstrate JavaScript/Node.js source review, test reasoning, GitHub Actions permissions and dependency/license checks, plus awareness of keyboard and screen-reader testing limits. Record what the reviewer personally checked, questions left open, conflicts and realistic availability. The reviewer may reject work; no number of approvals is a performance target.
+
+After a successful trial and explicit founder approval, document the permitted repositories/actions, code-owner responsibilities, support limits and who can revoke access. The founder retains ownership and administrative control. Read the contribution, privacy and security rules before granting any permission; no private organization records or credentials are required for a trial.
+
+If a maintainer leaves or becomes unavailable, record an issue/PR handoff, unresolved risks and any support limits. Reassign only with the next person's consent. The founder must approve and carry out any access removal or credential rotation; remove obsolete CODEOWNERS entries through normal review. Do not rewrite contribution history, erase credit, promise a replacement or waive review while the role is vacant. Pause work that lacks an authorized decision-maker.
 
 ## Founder and project presentation
 
@@ -129,6 +137,25 @@ A practical sequence is:
 5. Reassess costs, capacity, demand and conflicts before seeking recurring commitments. If there is no demand or qualified reviewer, do not create subscriptions, hire people or buy infrastructure to make the initiative appear larger.
 
 [GitHub Pages usage rules](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) restrict primarily commercial transaction/SaaS sites. The humanitarian project website stays noncommercial; any future commercial presence needs a separate hosting/terms decision. No sales site or payment flow is added here.
+
+### One service to evaluate, not an active offer
+
+Decision: research a limited public-website review rather than build a sales platform. The project can demonstrate static-site tests and automated accessibility checks on its own code. It has not demonstrated commercial demand, client delivery, professional certification or a complete accessibility audit. Do not advertise those claims or forecast sales.
+
+A possible trial scope is a review of up to five public static pages: keyboard navigation, narrow-screen layout, clear form labels, broken public links and automated accessibility findings. The deliverable would be a reproducible report with URLs, test environment, observed problems, limits and suggested priorities. Report no finding where none was observed. Source edits, full WCAG certification, legal compliance opinions, penetration tests, production credentials, private data and ongoing support are excluded unless separately scoped and competently reviewed.
+
+Before a client engagement, an experienced reviewer must assess capability and the client must independently choose the service. Agree in writing on pages and methods, deliverables, acceptance/retest procedure, payee, price, payment timing, expense approval, schedule, cancellation, privacy, licensing/ownership and support limits. No rate, customer, contract or sale is established here. If there is no demand or qualified review capacity, defer it. Existing promised humanitarian help remains free and cannot be made conditional on buying this service.
+
+### Compensation roles
+
+| Role | Arrangement required | What it does not grant |
+| --- | --- | --- |
+| Volunteer reviewer | Optional unpaid work and agreed review scope; no response-time promise. | No promised future pay, equity, revenue share, ownership or automatic repository access. |
+| Paid contractor | Separate approved scope, price, deliverable, acceptance and funding source before paid work begins. | No maintainer authority, employment status determination or ownership beyond explicit lawful terms. |
+| Compensated maintainer | Sustainable approved budget, duties, capacity, review independence, term and end-of-support plan. Check the funding source's spending and compensation restrictions. | No automatic repository ownership or right to approve their own work. |
+| Formal business partner | Separate negotiated agreement and appropriate professional review; explicit founder approval for any ownership change. | No assumed percentages, signing authority or shared ownership from contributing or being paid. |
+
+These are proposed distinctions, not agreements or legal classifications. Restricted food-assistance funding is not founder income. Keep compensation approvals, restrictions and conflicts separate from task verification; bank, tax and private payment details stay out of GitHub.
 
 ## 90-day targets and stop conditions
 
