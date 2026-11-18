@@ -1,8 +1,47 @@
-import {test} from 'node:test';
+import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile,readdir,stat} from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
-async function walk(dir){const result=[];for(const name of await readdir(dir)){if(['.git','node_modules','dist','test-results','playwright-report'].includes(name))continue;const file=path.join(dir,name);if((await stat(file)).isDirectory())result.push(...await walk(file));else result.push(file);}return result;}
-test('repository documentation links resolve locally',async()=>{for(const file of (await walk('.')).filter(f=>f.endsWith('.md'))){const text=await readFile(file,'utf8');for(const match of text.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)){const href=match[1];if(/^(https?:|#|mailto:)/.test(href))continue;await assert.doesNotReject(stat(path.resolve(path.dirname(file),href.split('#')[0])),`${file}: ${href}`);}}});
-test('workflow dependencies are immutable and PR code has no deployment permissions',async()=>{for(const file of await readdir('.github/workflows')){const text=await readFile(`.github/workflows/${file}`,'utf8');for(const match of text.matchAll(/uses:\s*([^\s#]+)/g))assert.match(match[1],/^[\w.-]+\/[\w./-]+@[a-f0-9]{40}$/);assert.doesNotMatch(text,/pull_request_target|secrets\./);}const ci=await readFile('.github/workflows/ci.yml','utf8');assert.match(ci,/needs: test/);assert.match(ci,/github.event_name != 'pull_request'/);});
-test('public mission records have unique evidence links and bounded review windows',async()=>{const missions=JSON.parse(await readFile('site/data/missions.json','utf8'));assert.equal(new Set(missions.map(m=>m.evidence)).size,missions.length);for(const m of missions){assert.equal(m.example,false);assert.ok((Date.parse(m.expiresAt)-Date.parse(m.verifiedAt))/86400000<=90);}});
+async function walk(dir) {
+  const result = [];
+  for (const name of await readdir(dir)) {
+    if (['.git', 'node_modules', 'dist', 'test-results', 'playwright-report'].includes(name))
+      continue;
+    const file = path.join(dir, name);
+    if ((await stat(file)).isDirectory()) result.push(...(await walk(file)));
+    else result.push(file);
+  }
+  return result;
+}
+test('repository documentation links resolve locally', async () => {
+  for (const file of (await walk('.')).filter((f) => f.endsWith('.md'))) {
+    const text = await readFile(file, 'utf8');
+    for (const match of text.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)) {
+      const href = match[1];
+      if (/^(https?:|#|mailto:)/.test(href)) continue;
+      await assert.doesNotReject(
+        stat(path.resolve(path.dirname(file), href.split('#')[0])),
+        `${file}: ${href}`,
+      );
+    }
+  }
+});
+test('workflow dependencies are immutable and PR code has no deployment permissions', async () => {
+  for (const file of await readdir('.github/workflows')) {
+    const text = await readFile(`.github/workflows/${file}`, 'utf8');
+    for (const match of text.matchAll(/uses:\s*([^\s#]+)/g))
+      assert.match(match[1], /^[\w.-]+\/[\w./-]+@[a-f0-9]{40}$/);
+    assert.doesNotMatch(text, /pull_request_target|secrets\./);
+  }
+  const ci = await readFile('.github/workflows/ci.yml', 'utf8');
+  assert.match(ci, /needs: test/);
+  assert.match(ci, /github.event_name != 'pull_request'/);
+});
+test('public mission records have unique evidence links and bounded review windows', async () => {
+  const missions = JSON.parse(await readFile('site/data/missions.json', 'utf8'));
+  assert.equal(new Set(missions.map((m) => m.evidence)).size, missions.length);
+  for (const m of missions) {
+    assert.equal(m.example, false);
+    assert.ok((Date.parse(m.expiresAt) - Date.parse(m.verifiedAt)) / 86400000 <= 90);
+  }
+});

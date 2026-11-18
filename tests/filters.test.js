@@ -1,11 +1,87 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { filterMissions, effectiveStatus, safeUrl, reviewedContributions } from '../site/filters.js';
+import {
+  filterMissions,
+  effectiveStatus,
+  safeUrl,
+  reviewedContributions,
+} from '../site/filters.js';
 const now = new Date('2026-11-18T12:00:00Z');
-const base = {id:'one',title:'Write a guide',description:'Accessible help',organization:'OneMealForward',skill:'Writing',location:'Worldwide',languages:['English'],mode:'Online',effort:'30–60 min',status:'verified',expiresAt:'2027-01-01',example:false};
-test('all six filters and case-insensitive search combine',()=>{assert.equal(filterMissions([base],{search:' WRITE ',skill:'Writing',location:'Worldwide',language:'English',mode:'Online',effort:'30–60 min',status:'verified'},now).length,1);for(const [key,value] of Object.entries({search:'missing',skill:'Design',location:'Detroit',language:'French',mode:'In person',effort:'1–2 hours',status:'pending'}))assert.equal(filterMissions([base],{[key]:value},now).length,0);});
-test('examples excluded from every public query',()=>assert.equal(filterMissions([{...base,example:true}],{},now).length,0));
-test('expiration overrides verified badge and filter',()=>{const expired={...base,expiresAt:'2026-11-17'};assert.equal(effectiveStatus(expired,now),'expired');assert.equal(filterMissions([expired],{status:'verified'},now).length,0);assert.equal(effectiveStatus({...base,expiresAt:'2026-11-18'},now),'verified');});
-test('pending records stay pending',()=>assert.equal(effectiveStatus({...base,status:'pending'},now),'pending'));
-test('unsafe protocols and embedded credentials rejected',()=>{for(const value of ['javascript:alert(1)','data:text/html,hi','http://example.org','not a url','https://user:password@example.org'])assert.equal(safeUrl(value),null);assert.equal(safeUrl('https://example.org/'),'https://example.org/');});
-test('impact only counts reviewed evidence-linked contributions',()=>assert.equal(reviewedContributions({contributions:[{status:'reviewed',reviewer:'reviewer',evidence:'https://github.com/gsel001/one-meal-forward/pull/1'},{status:'pending',reviewer:'reviewer',evidence:'https://example.org'},{status:'reviewed',evidence:'https://example.org'}]}).length,1));
+const base = {
+  id: 'one',
+  title: 'Write a guide',
+  description: 'Accessible help',
+  organization: 'OneMealForward',
+  skill: 'Writing',
+  location: 'Worldwide',
+  languages: ['English'],
+  mode: 'Online',
+  effort: '30–60 min',
+  status: 'verified',
+  expiresAt: '2027-01-01',
+  example: false,
+};
+test('all six filters and case-insensitive search combine', () => {
+  assert.equal(
+    filterMissions(
+      [base],
+      {
+        search: ' WRITE ',
+        skill: 'Writing',
+        location: 'Worldwide',
+        language: 'English',
+        mode: 'Online',
+        effort: '30–60 min',
+        status: 'verified',
+      },
+      now,
+    ).length,
+    1,
+  );
+  for (const [key, value] of Object.entries({
+    search: 'missing',
+    skill: 'Design',
+    location: 'Detroit',
+    language: 'French',
+    mode: 'In person',
+    effort: '1–2 hours',
+    status: 'pending',
+  }))
+    assert.equal(filterMissions([base], { [key]: value }, now).length, 0);
+});
+test('examples excluded from every public query', () =>
+  assert.equal(filterMissions([{ ...base, example: true }], {}, now).length, 0));
+test('expiration overrides verified badge and filter', () => {
+  const expired = { ...base, expiresAt: '2026-11-17' };
+  assert.equal(effectiveStatus(expired, now), 'expired');
+  assert.equal(filterMissions([expired], { status: 'verified' }, now).length, 0);
+  assert.equal(effectiveStatus({ ...base, expiresAt: '2026-11-18' }, now), 'verified');
+});
+test('pending records stay pending', () =>
+  assert.equal(effectiveStatus({ ...base, status: 'pending' }, now), 'pending'));
+test('unsafe protocols and embedded credentials rejected', () => {
+  for (const value of [
+    'javascript:alert(1)',
+    'data:text/html,hi',
+    'http://example.org',
+    'not a url',
+    'https://user:password@example.org',
+  ])
+    assert.equal(safeUrl(value), null);
+  assert.equal(safeUrl('https://example.org/'), 'https://example.org/');
+});
+test('impact only counts reviewed evidence-linked contributions', () =>
+  assert.equal(
+    reviewedContributions({
+      contributions: [
+        {
+          status: 'reviewed',
+          reviewer: 'reviewer',
+          evidence: 'https://github.com/gsel001/one-meal-forward/pull/1',
+        },
+        { status: 'pending', reviewer: 'reviewer', evidence: 'https://example.org' },
+        { status: 'reviewed', evidence: 'https://example.org' },
+      ],
+    }).length,
+    1,
+  ));
