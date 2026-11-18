@@ -6,6 +6,8 @@ OneMealForward is a free, open-source project making action against hunger acces
 
 [Explore the mission board](https://gsel001.github.io/one-meal-forward/) · [Find your first task](https://github.com/gsel001/one-meal-forward/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) · [Join the community](https://github.com/gsel001/one-meal-forward/discussions)
 
+**Coordinate the work:** [Mission Control — public GitHub Project](https://github.com/users/gsel001/projects/1) · [How to use the workspace](docs/mission-control.md)
+
 ## What works today
 
 - A responsive mission board with search and location, language, skill, availability, effort, and verification filters.
