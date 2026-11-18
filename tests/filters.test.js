@@ -9,3 +9,14 @@ test('expiration overrides verified badge and filter',()=>{const expired={...bas
 test('pending records stay pending',()=>assert.equal(effectiveStatus({...base,status:'pending'},now),'pending'));
 test('unsafe protocols and embedded credentials rejected',()=>{for(const value of ['javascript:alert(1)','data:text/html,hi','http://example.org','not a url','https://user:password@example.org'])assert.equal(safeUrl(value),null);assert.equal(safeUrl('https://example.org/'),'https://example.org/');});
 test('impact only counts reviewed evidence-linked contributions',()=>assert.equal(reviewedContributions({contributions:[{status:'reviewed',reviewer:'reviewer',evidence:'https://github.com/gsel001/one-meal-forward/pull/1'},{status:'pending',reviewer:'reviewer',evidence:'https://example.org'},{status:'reviewed',evidence:'https://example.org'}]}).length,1));
+
+
+test('search matches accents, alternate accents, and language metadata', () => {
+  const international = { ...base, title: 'Café São Paulo',
+    description: 'Récolte', languages: ['Français', 'English'] };
+  assert.equal(filterMissions([international], { search: 'cafe sao' }, now).length, 1);
+  assert.equal(filterMissions([international], { search: 'RECOLTE' }, now).length, 1);
+  assert.equal(filterMissions([international], { search: 'francais' }, now).length, 1);
+  assert.equal(filterMissions([international], { search: 'online' }, now).length, 1);
+  assert.equal(filterMissions([international], { search: 'nonexistent' }, now).length, 0);
+});
