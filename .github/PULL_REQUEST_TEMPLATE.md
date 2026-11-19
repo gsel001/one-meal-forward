@@ -16,7 +16,7 @@ For visible changes, add privacy-safe screenshots or explain how to review them.
 If this PR changes `GOVERNANCE.md`, `docs/governance/`, `.github/CODEOWNERS`, reviewer permissions, branch rules, or constitutional policy:
 
 - Link the public proposal and exact text under review.
-- Record the required consultation window, voting eligibility/quorum, results, recusals, and independently verified decision, **if the Charter is ratified and applies**.
-- Identify non-author technical and oversight reviewers and confirm relevant GitHub protections are satisfied.
+- Record the consultation window, objections and founder's substantive response; for reserved constitutional changes also record the qualified council/community tallies, recusals and **founder's written consent or an independently verified Article 9 exception**, if the Charter is ratified and applies.
+- Identify genuinely independent non-author engineering and, where required, safety/governance reviewers; confirm passing CI, approved CODEOWNERS review and any safety hold clearance. **The founder is never exempt.**
 - If the project has too few authorized people to meet an applicable requirement, mark the decision **deferred**, not approved.
-- Never claim a council, vote, nonprofit status, or amendment ratification that has not actually occurred.
+- Never claim a council, vote, nonprofit status, verified food-relief partner, or amendment ratification that has not actually occurred.
