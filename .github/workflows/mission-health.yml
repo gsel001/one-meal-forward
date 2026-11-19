@@ -1,0 +1,21 @@
+name: Mission issue health
+on:
+  schedule:
+    - cron: '17 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Test the audit
+        run: node --test tests/audit-missions.test.js
+      - name: Check whether advertised issues are still open
+        run: node scripts/audit-missions.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

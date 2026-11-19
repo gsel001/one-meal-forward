@@ -33,3 +33,22 @@ The dependency-review workflow reviews new dependency vulnerabilities and allowe
 ## First partner checklist
 
 Follow verification.md; do not invite or message organizations on the founder's behalf without approval. A listing needs official public evidence, consent, reviewer, scope, safe contact route, and expiry. No field outcomes are assumed. Funding accounts, applications, purchases, and claims of charitable status remain unapproved.
+
+
+## Automated mission issue health check
+
+The read-only **Mission issue health** workflow runs daily and on manual dispatch.
+It checks that each currently advertised, unexpired OneMealForward project task
+still points to an **open GitHub issue**. It skips expired, pending, and partner
+listings. It requires no paid monitor or write-access token.
+
+A failed run may mean a task closed, was deleted, or GitHub's API was unavailable.
+Treat failures as a review request, **not proof of wrongdoing**. Inspect the
+linked issue, then update or remove the record via a reviewed pull request.
+The workflow deliberately does not publish content or automatically extend
+verification dates. A closed task can still appear on the static board until a
+maintainer changes the data and redeploys it; this monitor reduces that window
+but does not make the board real-time.
+
+To run locally with access to GitHub: node scripts/audit-missions.mjs.
+To test without network access: node --test tests/audit-missions.test.js.
