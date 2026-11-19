@@ -1,90 +1,136 @@
-# OneMealForward Community Charter
+# OneMealForward — Mission-First Stewardship Charter
 
-> **Status: PROPOSED — NOT RATIFIED.** This document is a governance design for an independent volunteer project. It is not an assertion that a council, election, charity, partnership, or legally incorporated organization already exists. See [transition and GitHub enforcement](ACCESS_AND_TRANSITION.md).
+> **DRAFT FOR CONSULTATION — NOT ADOPTED.** This founder-stewarded, community-accountable charter is a proposal, not an assertion that a council, elected electorate, independent safety panel, registered charity, or GitHub organization already exists. Read the [visual hierarchy and decision matrix](ROLE_HIERARCHY.md), [rights and appeals guide](COMMUNITY_RIGHTS.md), [transition plan](ACCESS_AND_TRANSITION.md), and [current roster](ROSTER.md).
 
-## Article 1 — Purpose and limits
+## Preamble — fighting hunger comes first
 
-OneMealForward brings volunteers and technical skills together to support food-relief organizations through organization-approved work. Its commitments are public evidence, informed consent, safety, accessibility, transparency, and free participation. Software contributions are not counted as meals or food-relief outcomes.
+OneMealForward exists to use responsible, voluntary technical assistance to help food-relief organizations address real, **organization-approved** needs. We protect the founder from arbitrary displacement, protect every team member from unfair treatment, and welcome respectful criticism from anyone. We judge success by independently verified outcomes, not promises, status, social influence, or GitHub activity alone.
 
-This Charter governs project conduct, permissions, leadership, decisions, funds (if ever authorized), and changes to this Charter. It does not supersede law, GitHub's platform terms, or an organization's consent to its own work. OneMealForward is not currently a registered nonprofit, has no confirmed food-relief partner, and does not accept donations. Any incorporation, fundraising, or transfer of assets requires a separate recorded decision and appropriate legal steps.
+**No person, including the Founder/Mission Steward, may bypass independent technical or safety review, partner consent, privacy protections, or factual integrity requirements.** The founder's strategic authority is protected; unsafe implementations are not.
 
-No founder, council member, administrator, sponsor, AI system, or maintainer has a permanent veto or permanent elected seat.
+OneMealForward is currently an independent open-source initiative, **not a registered nonprofit**, has **no confirmed food-relief partner**, and does not accept donations.
 
-## Article 2 — Membership and equal standing
+## Article 1 — Mission and fundamental safeguards
 
-- **Participant:** anyone may read, discuss, report issues, and contribute through GitHub's public workflow. No GitHub write permission is needed.
-- **Contributor:** a participant with accepted work or substantive, publicly reviewed project contributions. Contributors may volunteer for specialized roles.
-- **Voting member:** a contributor who has opted in to the public membership register, has participated for at least 30 days, and has at least one reviewed, accepted contribution or independently verified substantive review. Eligibility is the same for technical and nontechnical work. There is no fee.
-- One natural person has one vote, regardless of GitHub accounts or donations. Identity checks must be proportionate, privacy-preserving, and non-discriminatory; do not collect legal IDs or beneficiary information for ordinary membership.
-- The governance secretary maintains a public register of opted-in GitHub handles, eligibility dates, and role terms without publishing personal identities. People can opt out of future voting; historical decision records remain accurate with privacy-sensitive redactions when needed.
-- No candidate, sponsor, founder, or council may arbitrarily add voters, remove voters, or shorten eligibility rules to win a specific vote. Challenges and exclusions require written reasons, notice, an appeal, and recusal of interested decision-makers.
+1. Every activity must support lawful, accessible, safe, respectful and privacy-preserving food-relief work. A task concerning an outside organization requires authorization from that organization.
+2. Do not claim meals served, people helped, donations delivered, verified partnerships, charity status or impact without reviewable evidence. Merged code does not itself establish humanitarian impact.
+3. Participation is free: no fees, required purchases, deposits, or payments for the right to volunteer.
+4. Protect safety, informed consent, confidentiality, volunteer dignity, accessibility and the right to report concerns without retaliation.
+5. Separate **strategic decisions** from **technical release authorization** and **independent safeguarding decisions**. No strategy decision, election, owner privilege, emergency claim, or funding promise automatically authorizes deployment.
+6. Use least-privilege GitHub permissions, transparent decision records and independently reviewed changes.
+7. These protections bind all roles as governance standards once adopted. A platform administrator may retain technical power to violate them; that limitation must never be misrepresented as a working technical lock.
 
-## Article 3 — Separation of responsibility
+## Article 2 — Protected Founder / Mission Steward
 
-| Function | Primary responsibility | What it cannot do alone |
+1. **The founder, initially \`@gsel001\`, is the protected Founder and Mission Steward.** Historical recognition of the founder is permanent. The active steward holds final **mission-aligned strategic authority** over priorities, direction, public positioning and delegated operational leadership, within this Charter.
+2. The Founder/Mission Steward role **does not expire through ordinary elections** and cannot be abolished, demoted, transferred or stripped of substantive strategic authority by a routine council vote, new member majority, unilateral GitHub administrator act, or ordinary PR. The founder is protected from hostile takeovers and arbitrary dismissal.
+3. On major decisions the founder must consult the advisory council when it exists, review material objections, comply with any valid reconsideration period, and publish a reasoned decision that addresses substantive concerns. The founder can ultimately choose a lawful strategic course, but not bypass technical or safeguarding gates.
+4. Founder **written consent** is a reserved requirement for voluntary transfer of the project repository to another GitHub organization, a change of controlling assets, changes to the core mission, the protected Founder/Mission Steward office, or the constitutional amendment and succession rules **while the founder is serving, capable and not the subject of an independent for-cause proceeding**. Founder consent is necessary but **never sufficient**: the independent approval process in Article 10 also applies.
+5. **Explicit non-bypass rule:** the founder cannot self-approve a PR; disable, weaken or circumvent required CI, branch protections, code-owner approval or an independent safety hold; use administrator privileges or alternate branches to evade review; fabricate a decision; or order another person to do any of these. The founder may submit evidence and appeal a disputed technical/safety decision through the independent process, not override it.
+6. The founder is bound by the same Code of Conduct, conflict-of-interest, privacy, anti-retaliation and fair-process standards as everyone else. A case about the founder is handled by independent people, without founder selection of adjudicators, a founder veto, or access to private complaint information beyond a fair opportunity to respond.
+7. Founder removal from active authority is an **exceptional for-cause process**, not an election contest. It requires substantiated serious misconduct, corruption, credible ongoing threats to people, deliberate safety-control circumvention, or other comparable material breach, plus notice, evidence, response rights, independent investigation, supermajority finding and impartial appeal under Article 9. If enough independent members do not exist, permanent removal is deferred; narrow emergency containment of harmful access may still occur where technically possible and lawful.
+8. The founder can voluntarily resign, delegate duties, or designate an interim successor through the documented succession process. If incapacitated, the organization follows independent continuity review rather than assuming broad powers. Historical founder recognition remains regardless of later stewardship.
+9. **GitHub ownership caveat:** a Charter cannot make a personal-account owner or GitHub organization owner technically irremovable. Migration must include a separately approved custody and legal-continuity plan, and cannot be represented as making the founder immune to removal by another GitHub owner.
+
+## Article 3 — Rights of every person
+
+The founder, contributors, prospective volunteers, reviewers, elected representatives, moderators and stewards have equal rights to:
+
+- **Voice:** suggest changes, raise good-faith objections, criticize leadership or code, and report wrongdoing without retaliation.
+- **Fair treatment:** no arbitrary removal, intimidation, harassment, discriminatory treatment or punishment for respectful disagreement.
+- **Due process:** notice of material accusations, an opportunity to respond, proportionate action, independent review where available, documented rationale and an appeal route.
+- **Privacy:** safeguarding and complaint information is restricted to those who need it; public GitHub conversations must not be represented as confidential.
+- **Participation:** proposals and meaningful nontechnical contributions receive fair consideration; payment, influence, friendship with leadership, or prior agreement with the founder is never required.
+- **Transparency:** role assignments, access changes, governance proposals, votes and non-sensitive decisions are documented truthfully.
+
+An emergency restriction needed to protect safety may precede a hearing but must be narrowly scoped, time-limited where possible, and independently reviewed. Nobody has an automatic right to repository write, secrets, or administrator access.
+
+See [Community Rights and Concerns](COMMUNITY_RIGHTS.md).
+
+## Article 4 — Hierarchy of responsibilities and checks
+
+The [role hierarchy and decision matrix](ROLE_HIERARCHY.md) is the implementation reference for this Article. **The mission and safety rules govern every role; the founder is the strategic leader, not a substitute technical approver.**
+
+| Role | Responsibility | Cannot do alone |
 | --- | --- | --- |
-| Community assembly | Elect or recall council representatives; ratify constitutional changes | Push or merge code, access credentials, override security checks |
-| Governing council | Set strategy, appoint accountable officers, approve sensitive policy and access decisions | Self-approve its code, bypass an independent security review, rewrite the Charter unilaterally |
-| Engineering maintainers | Review architecture, tests, deployment, and code PRs | Claim food-bank consent or authorize funding |
-| Security and ethics stewards | Review vulnerability handling, privacy, conflicts, partner safety, and complaints | Deploy a feature alone, conceal an incident, or impose a permanent sanction without appeal |
-| Operations coordinator | Keep decisions, meetings, roles, elections, and release records organized | Grant themselves elevated permissions or override votes |
-| GitHub administrators/custodians | Maintain the repository, backups, settings, and access as delegated | Treat technical control as unilateral governance authority |
-| Contributors/reviewers | Propose changes, do technical or nontechnical work, give feedback | Approve their own work or claim a formal role without authorization |
+| Founder / Mission Steward | Final mission-aligned strategy, major priorities, protected continuity | Merge own code, cancel an independent safety hold, remove critics, change Charter alone |
+| Advisory Council (3 at first, later 5) | Representative feedback, independent challenge, reconsideration, consultation | Override safety reviewers, declare unrecorded votes, change founder role by routine vote |
+| Engineering Maintainers / Code Owners | Design, tests, security-conscious PR review, release readiness | Approve own PR or establish organizational consent |
+| Safety and Ethics Stewards | Safeguarding, privacy, conflicts, safety objections and impartial appeals | Serve as sole complainant, investigator and adjudicator |
+| Governance Secretary / Operations | Eligible-voter register, proposal deadlines, appointment and audit records | Invent quorum, appoint themselves, or grant access |
+| Members and Contributors | Public proposals, reviews, voting when eligible, mission work | Approve unreviewed deployments or obtain privileged access by popularity |
+| GitHub Custodians | Administer settings, credentials, backups, incident containment | Convert platform privileges into an authorized governance override |
 
-A person may hold multiple roles during the earliest phase, but must disclose overlaps and recuse when independent review is required. As staffing permits, separate security/ethics stewardship from day-to-day code merges and keep two independent administrators. Technical access is not an elected political rank.
+A person may cover more than one role in the startup phase but **never independently reviews their own work or adjudicates a complaint against themselves**. Sensitive approvals require genuinely distinct nonconflicted humans.
 
-## Article 4 — The elected council
+## Article 5 — Council representation and eligibility
 
-The inaugural council has **three distinct human seats**: one founding-project seat (initially the founder) and two independently recruited community seats. The founder's seat expires after the first regular election and is not permanent. The first three-person council is constituted only after all three people publicly consent and the onboarding procedure in [ACCESS_AND_TRANSITION.md](ACCESS_AND_TRANSITION.md) is completed.
+1. The **inaugural Advisory Council** consists of the founder as ex-officio Mission Steward and two **independent, consenting non-founder advisers**, preferably one engineering and one community/safeguarding. The council does not exist until appointments are accepted and recorded.
+2. When a genuine electorate exists, the council may expand to five: the founder as ex-officio member and **four elected representatives**—two general community seats, one engineering seat, and one safety/operations seat. Elected representatives serve the community rather than the founder. Council seats do **not** carry GitHub ownership automatically.
+3. Elected terms: **12 months**, no more than two consecutive terms; founding non-founder appointments last at most six months before a fair election or transparent renewal. A vacant council is not filled by invented people or votes.
+4. **Voting members** opt in after 30 days of project participation and at least one verifiable substantive contribution or independently reviewed contribution, including noncoding work. One person, one vote, with privacy-preserving anti-duplicate procedures and eligibility appeals.
+5. Elections require at least seven days for nominations and seven for ballots; at least **five eligible voters**, and at least half must participate. If these thresholds cannot be met, a vote is advisory and vacancies remain.
+6. For council decisions, quorum is at least two-thirds of filled seats rounded up, **including at least two nonconflicted humans**. An ordinary recommendation requires a majority of members present at quorum. A two-thirds council vote can request reconsideration under Article 6. The founder cannot fabricate a council decision.
+7. Elected seats can be recalled for cause with a two-thirds community vote at election quorum after notice and an appeal opportunity; that process does not remove the protected Founder/Mission Steward office.
 
-At the first regular election after the voting-member community is established, the council expands to **five elected seats**: two community-at-large seats, two technical/contributor seats, and one safety/operations seat. Any eligible voting member may seek any seat for which they can perform the duties; these are representative functions, not ownership privileges. If too few qualified candidates exist, remain at three seats, disclose vacancies, and do not fabricate elections.
+## Article 6 — Mandatory consultation and meaningful feedback
 
-Regular terms are 12 months, at most two consecutive terms, with staggered elections when feasible. Inaugural appointments last at most six months before an election or renewal vote. Vacancies trigger an open nomination process and a special election within 45 days when there are enough eligible voters. Council representatives can be recalled by a two-thirds vote of voting members using the election safeguards below. There is no founder veto.
+1. Anyone may propose a change or raise a concern through public issues/Discussions, or a private safety channel if the subject requires confidentiality. A proposal deserves an acknowledgment, normally within seven days when volunteer capacity allows; unavoidable delays must be transparent.
+2. **Major strategic proposals** require at least seven days of public consultation when safe, an Advisory Council recommendation if the council exists, and the founder's written decision: **approve, revise, defer or decline**, with reasons addressing material objections.
+3. A recorded **two-thirds advisory council vote at quorum** requires one seven-day reconsideration period. The founder must respond to the reasons before proceeding. This procedure ensures meaningful listening, not an unlimited council veto over safe strategic direction.
+4. Safety and code approvals are independent gates under Article 7. Even after completing consultation, a founder's final strategic approval **cannot force an unsafe deployment**.
 
-## Article 5 — Elections and ordinary decisions
+## Article 7 — Independent safety and engineering gates
 
-- Election notice, open nominations, candidate statements, conflicts, voting window, and tally method must be published in GitHub Discussions or a public issue.
-- Provide at least seven calendar days for nominations and seven for voting. Voting must be authenticated to eligible membership and counted one vote per person. Use a transparent, auditable method without exposing private ballots unnecessarily. If a secure voting mechanism is unavailable, do not claim a binding election occurred.
-- At least three eligible voters and one-half of eligible members must participate in a binding community vote; otherwise the vote is nonbinding and may be rerun. Abstentions count for turnout, not as approval.
-- Ordinary council decisions require a majority of non-conflicted seated members and a quorum of at least two-thirds of seated members (rounded up). Conflicts do not automatically lower the quorum; defer decisions when necessary.
-- Publish proposed decisions, evidence, dissent, votes, recusals, and outcomes in a durable public decision log. Use private channels for sensitive security or personal information, with a safe public summary.
+1. Changes to protected branches require passing CI, resolution of required review threads and at least one qualified **non-author code-owner approval**. A founder may submit code, but **never approves or merges their own change without satisfying the same independent rules**.
+2. For constitutional, safety-sensitive, GitHub permissions, repository transfer, rulesets, CODEOWNERS, deployments, privacy, partner authorization or impact-reporting changes, require **two non-author, nonconflicted approvals** covering engineering and independent safety/governance when suitable reviewers exist. A human reviewer must actually examine AI-assisted changes.
+3. An independent reviewer can issue a documented **safety hold** for a specific, evidenced material risk. The hold must identify the affected change, rationale, required evidence and a fair appeal path. While active, the change cannot deploy through another branch, an administrator override, lowered CI standards, or proxy approvals.
+4. A hold may be independently reassessed by a **different** qualified reviewer and an independent safety steward. Reviewers who authored or materially benefit from the disputed code recuse. If the evidence does not justify the hold, the appeal panel may lift it with recorded reasons; the founder cannot do so alone. When no qualified appeal panel exists, defer the disputed release.
+5. Emergency action may **temporarily disable a compromised service, restrict credentials, or suspend a harmful listing**, with prompt disclosure when safe and independent post-incident review within 72 hours when a second trusted person is available. Emergency status **does not authorize unreviewed feature releases or weakening protected branch checks**.
+6. A technical reviewer may reject a particular unsafe implementation, not seize authority over the overall humanitarian mission. Feedback must be actionable, respectful and appealable.
+7. Release checks, verification policies and administrator controls may be changed only by the same independent technical/governance review applicable to their risk category; constitutional non-bypass rights require Article 10.
 
-## Article 6 — Pull requests, security, and mission verification
+## Article 8 — Oversight, complaints and accountability
 
-- No one may approve their own PR, and a reviewer must not approve an unexamined AI-generated diff. CI and AI scans assist reviewers; neither replaces human judgment.
-- Ordinary changes require a passing protected-branch `test` check and at least one qualified non-author code-owner approval. Resolve review conversations and re-review after material changes.
-- Changes to authentication, GitHub Actions permissions, CODEOWNERS, branch rules, security policy, partner verification, impact reporting, access management, or deployment authority require a documented second independent review when sufficient authorized reviewers exist. Until then, postpone nonemergency sensitive changes rather than silently waiving that requirement.
-- A volunteer may comment on a PR without write access, but a GitHub code-owner approval requires appropriate repository write permission and a valid CODEOWNERS entry.
-- Human authorization and evidence are mandatory before an organization is called a partner, a request is marked verified, or any food-relief outcome is claimed. Staff consent, volunteer eligibility, security, privacy, and current expiry are separate checks.
-- A security incident may require prompt temporary containment by a custodian. Such action must be narrowly scoped, logged within 24 hours when safe, and reviewed by another trusted person within 72 hours when available. Emergency action cannot amend this Charter or create permanent privileges.
+1. Everyone can raise complaints against any role, including the founder and safety stewards. Good-faith reports are protected from retaliation; knowingly fabricated accusations are handled with fair process.
+2. Nonconflicted independent volunteers investigate when available. **No accused person chooses the sole judge, controls the appeal, or retaliates against a reporter.** Provide notice, a safe opportunity to respond, and a reasoned outcome.
+3. A nonconflicted three-person panel should hear serious disciplinary appeals. If staffing is insufficient, state that internal independent resolution is unavailable, seek outside neutral assistance when possible, and defer permanent discipline unless required by law or immediate safety needs. GitHub Trust & Safety remains available for platform abuse.
+4. Access may be restricted immediately for credible active compromise or threats, but restrictions must be narrow, auditable and reviewed; do not publicize sensitive complaint details.
 
-## Article 7 — Transparency, accountability, and appeals
+## Article 9 — Founder protection, exceptional removal and succession
 
-Record elected seats, scoped roles, terms, council decisions, governance proposals, votes, recusals, and changes to elevated access in project documentation without revealing secrets. Meeting attendance alone does not create voting eligibility.
+1. Disagreement, criticism, an election result, temporary absence, or a shift in membership **is not grounds to remove the founder**.
+2. A formal for-cause complaint must specify serious substantiated misconduct or comparable material breach. An independent investigator not appointed solely by the accused examines evidence and provides a fair response opportunity.
+3. Once the full five-member council exists, removal from **active** stewardship requires affirmative findings by at least **three of the four non-founder elected representatives**, confirmation by a separate nonconflicted independent appeals reviewer/panel, and notice of appeal. The founder cannot vote on or veto their own case. While the council has only two non-founder advisers, **a permanent removal decision is deferred** pending independent adjudication capacity; urgent safety access restrictions remain possible.
+4. The founder can request one independent appeal within 14 days; a panel not involved in the initial finding reviews procedure, credibility and proportionality. A substantiated finding under the process can stand without founder consent, but **cannot erase historical founder recognition**.
+5. On resignation, independently established incapacity, or final fair removal, qualified successors are appointed under a published continuity record. Only lawful custodians execute actual GitHub and asset changes. The project cannot claim this process is technically enforceable against a personally owned repository or an organization owner without corresponding platform and, where needed, legal arrangements.
+6. No successor inherits an unrestricted right to bypass Articles 1, 3 and 7.
 
-Conflicts of interest include financial interests, close relationships, reviewing one's own PR, and representing a beneficiary or vendor organization; disclose and recuse from affected decisions. Contributors may raise concerns without retaliation. A non-conflicted panel of at least three voting members should handle appeals once available; until then, acknowledge the lack of independent appeal capacity and use GitHub Trust & Safety for platform abuse. Avoid publicly disclosing sensitive reports.
+## Article 10 — Constitutional amendments and protected ownership decisions
 
-Removal of access for active compromise or imminent harm may be immediate; permanent role removal ordinarily requires notice, recorded reasons, an opportunity to respond, independent review, and appeal. A two-thirds community vote may recall an elected representative.
+The mission, founder role, governance authority, community rights, election rules, safety non-bypass provisions, review thresholds, amendment process, succession, repository ownership/transfer and controlling assets are **reserved constitutional matters**. An amendment or voluntary transfer requires **all** of the following:
 
-## Article 8 — Financial and institutional checks
+1. Exact proposed text and a public rationale, rights impact, risks and alternatives, with at least **14 full days** of notice and discussion (no unpublished substantive change at the last minute).
+2. Recorded approval by **at least three-quarters of non-founder seated council representatives**, rounded up, with at least **two independent non-founder affirmative votes**; for the full four representative seats, **3 of 4**. Conflicts do not reduce the required votes.
+3. Ratification by at least **two-thirds of votes cast** by eligible members, with the Article 5 eligible-voter and turnout quorum. Abstentions count toward turnout but not approval.
+4. **Explicit written founder approval**, while the founder is serving and capable, except for a properly completed Article 9 for-cause removal or independently determined incapacity/succession, where the founder cannot veto an adjudication about themselves. The exception cannot be used to remove non-bypass safety controls or erase member rights.
+5. A PR with the proposal, independently verified tally, recusal record, rationale, and **at least two distinct non-author reviewers** covering engineering and independent safety/governance, plus passing protected checks.
+6. Publication of the final decision, effective date, access/asset handoff plan and verification of the actual GitHub settings.
 
-The project currently has no authorized fundraising or financial accounts. Future spending, sponsorship, legal formation, paid roles, charity statements, or custody of domains and donated assets need a published budget, conflict declarations, council approval, and separate legal/financial compliance review. No officer may independently approve a payment to themselves. Volunteers never pay to contribute.
+**No founder-only waiver, council-only waiver, administrator bypass, AI approval, fabricated quorum or emergency charter amendment is legitimate.** If a quorum, independent panel, reviewer, or secure ballot is missing, the reserved change is **deferred**. These thresholds apply to attempts to amend this Article itself.
 
-## Article 9 — Protected constitutional amendment
+When a founder is no longer serving after valid succession, constitutional changes require the same independent council, community, safety and technical thresholds, plus the successor's recorded stewardship consent; a successor may not retroactively erase the original founder's recognition. Rules may never be amended as a pretext to authorize self-approval or fabricated humanitarian claims.
 
-A proposed amendment to this Charter, membership/voting rules, election rules, role powers, approval thresholds, amendment process, or governance protections must satisfy **all** of the following:
+## Article 11 — Legal and financial separation
 
-1. A public governance proposal identifies exact text, rationale, risks, impact on minorities and new contributors, and alternatives.
-2. At least **14 full calendar days** of public notice and discussion precede voting; publish the eligible-voter roll and council roster frozen for that proposal's vote, with a privacy-preserving challenge process.
-3. Approval by at least **three-quarters of all seated, nonvacant council members**, rounded up (3/3 in a three-person council; 4/5 in a five-person council). Conflicted members cannot vote, and conflicts do not lower the affirmative threshold.
-4. Ratification by at least **two-thirds of votes cast** by eligible community voters, with the Article 5 turnout quorum.
-5. A PR linking the proposal, final tally, independent verification of the tally, and at least **two non-author approvals**, including a technical reviewer and an independent oversight reviewer, plus all required CI and code-owner checks.
-6. Publication of the final decision record and effective date before merging. No change takes effect by editing a document, renaming a team, or changing a ruleset alone.
+No donations, bank accounts, contracts, payroll, sponsorships, nonprofit claims, or expenditures are authorized by this draft. Future financial operations require applicable law, a recorded budget, independent review, conflicts disclosure, and no sole approval of personal benefit. The founder's strategic authority does not replace financial controls or required legal authorization.
 
-When there are too few independent members, reviewers, or voters to satisfy this process, **constitutional amendments are deferred**. No solo-founder exception, emergency waiver, AI approval, administrator shortcut, or sponsor override exists as a valid governance decision. The text of this Article can only be amended by the same process.
+A future incorporated entity would need its own legally valid governing documents aligned with this Charter; Markdown alone does not create a nonprofit, irrevocable founder rights, or enforceable fiduciary duties.
 
-## Article 10 — Adoption and transition
+## Article 12 — Adoption and technical reality
 
-This Charter is a **proposal** until the initial three-person council is seated, its members explicitly accept these rules, the public consultation period is complete, and adoption is recorded with independent sign-offs. Founder-authored changes must not be described as democratically ratified. See [ACCESS_AND_TRANSITION.md](ACCESS_AND_TRANSITION.md) for the order of operations and technical limitations.
+The current [GOVERNANCE.md](../../GOVERNANCE.md), protected branch settings, security reporting and verification policy remain effective until legitimate adoption. This draft is **not ratified** merely by merging a PR.
 
-Until adoption, the current [GOVERNANCE.md](../../GOVERNANCE.md), protected branch, security policy, verification rules, and GitHub platform permissions remain operative. Unratified provisions should be followed as safeguards where feasible, but must never be represented as technically or legally binding. GitHub administrators retain platform-level powers; a repository text file alone cannot make administrator changes impossible.
+Adoption requires real, consenting independent advisers, public consultation, qualified external review, and a published adoption record. Do not invent votes or sign-offs when the project is too small. Future representative elections and heightened GitHub rulesets must be configured and tested as real people join.
+
+**GitHub limitation:** organization owners have administrative powers over other owners and repository settings. This Charter can make misuse illegitimate but cannot make it technically impossible. A transfer to a GitHub organization requires explicit separate founder authorization, independent approval, secure custody and succession plans, and ideally legal agreements matching the protected Founder/Mission Steward position. See [Access and Transition](ACCESS_AND_TRANSITION.md).
