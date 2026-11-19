@@ -19,3 +19,19 @@
 7. Recheck the official source before renewal. Close, expire, or remove unavailable requests promptly. Check linked issue state weekly; the static site does not synchronize live with GitHub.
 
 A second reviewer is preferred for organization listings; currently only the founder is a maintainer. Document this limitation and do not invent a second approval. A correction or consent withdrawal suspends the listing pending review. No organization missions are present at launch.
+
+
+## Build-time validation (defense in depth)
+
+The static site build runs the pure mission validator in site/mission-data.js.
+Every published record must have a unique slug ID, required visible fields,
+distinct language names, valid ISO UTC calendar dates, an expiry after review
+and no more than 90 days later, HTTPS action/evidence links, and no example flag.
+Project tasks must link to their own exact OneMealForward issue. Verified
+organization listings need a named reviewer and public consent evidence.
+A failed check prevents publication; it does **not** certify an organization.
+
+The validator is covered by tests/mission-data.test.js, including impossible
+dates, duplicate records, untrusted URLs and missing consent. Dates are parsed
+strictly rather than silently rolling invalid dates forward. Human verification
+and promptly removing disputed or closed requests remain mandatory.
