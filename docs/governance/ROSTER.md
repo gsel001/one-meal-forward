@@ -1,37 +1,38 @@
-# Governance roster and adoption status
+# Governance Roster and Implementation Status
 
-> **PROPOSED STRUCTURE — NOT YET ADOPTED.** Update this register only from verified public appointments, resignations, recalls, or elections. Do not invent votes or assign roles to people who have not accepted them.
+> **Proposed, not ratified.** List only real people who have explicitly accepted their actual roles. Do not treat a draft Charter or an interested Reddit/Discord user as an appointed official.
 
-Last checked: 2026-11-19
+Last verified: **2026-11-19**. [Charter](CHARTER.md) · [visual hierarchy](ROLE_HIERARCHY.md) · [transition plan](ACCESS_AND_TRANSITION.md).
 
-| Seat or responsibility | Status | Person | Authority and notes |
+| Position | Current status | Person | Notes |
 | --- | --- | --- | --- |
-| Founding steward / current GitHub repository administrator | Active interim | [@gsel001](https://github.com/gsel001) | Existing personal repository owner; no permanent council seat granted |
-| Independent technical reviewer / code owner | Vacant | — | Trial review, consent and limited access required before appointment |
-| Independent safety/ethics steward | Vacant | — | Consent, conflict disclosure and public appointment record required |
-| Inaugural three-person council | **Not constituted** | — | No council decisions or ratified constitutional votes exist |
-| Elected five-person council | **Not constituted** | — | Elections require a real, eligible electorate and a secure voting record |
-| Voting member registry | **Not established** | — | No eligible-voter count or fictional tally |
-| Independent appeal panel | **Not established** | — | Disclose limitation when moderating disputes |
-| GitHub organization | **Not created** | — | Repository currently belongs to a personal account |
+| Founder / current project lead | **Active under existing governance** | [`@gsel001`](https://github.com/gsel001) | Founder personally owns the repository; the proposed **protected Mission Steward role** is not yet ratified |
+| Protected Founder / Mission Steward (proposed charter office) | **Proposed, not yet formally constituted** | Intended: `@gsel001` | Final strategy under the proposed charter, never an independent code/safety reviewer of own work |
+| Independent code owner / reviewer | **Vacant** | — | Vet and onboard a consenting human; current CODEOWNERS only lists founder |
+| Independent safety / ethics steward | **Vacant** | — | Must be able to challenge the founder, recuse and handle concerns fairly |
+| Advisory Council — two independent inaugural seats | **Vacant** | — | No council vote or recommendation can be claimed until two real people consent |
+| Four elected community representative seats | **Not established** | — | Expansion requires an actual eligible electorate and secure election |
+| Governance secretary / operations | **Unassigned** | — | Cannot invent votes or receive admin access automatically |
+| Independent complaints/appeals panel | **Not established** | — | Serious independent adjudication not presently available |
+| Voting-member roll and authenticated voting | **Not established** | — | No binding constitutional referendum can be claimed |
+| GitHub organization and organization-owner custody plan | **Not established** | — | The project currently belongs to a personal GitHub account |
+| Registered charity / organization-approved food-relief partner | **Not established** | — | Do not claim incorporation, partnership or meal delivery |
 
-## Role appointment record (template)
+## Appointment and permission record
 
-For each future appointment, record:
+Before recognizing a future officeholder, document:
 
-- GitHub handle and explicit acceptance link
-- Role, scope, term start and end
-- Evidence of eligibility or prior trial review
-- Public nomination/discussion and vote links as applicable
-- Conflicts of interest and recusals
-- GitHub access separately granted, by whom, when and why
-- Date for next access review
-- Revocation and incident response procedure
+1. Their GitHub handle, explicit consent and proposed duties.
+2. Relevant experience, qualifications, any trial reviews and possible conflicts.
+3. Term dates, how to resign and how fair removal/appeal works.
+4. Who authorized the appointment, with a real decision or consultation record.
+5. Exact GitHub access separately granted, including why the permission is necessary and when it will be reviewed.
+6. Independent reviewer roles so no one approves or adjudicates their own work.
 
-Do not list a Reddit or Discord volunteer as a GitHub code owner solely because they offered to help. The actual permission state must be confirmed in GitHub.
+**Founder custody:** a future repository transfer requires explicit separately documented founder consent plus independent approvals, a post-transfer founder organization-owner arrangement, and continuity/asset plans. GitHub cannot make founder organization-owner access technically irrevocable. Do not transfer simply to satisfy this roster.
 
-## Change log
+## Transition log
 
-- 2026-11-19: Governance charter proposed; no council seated, votes held, permissions granted, ruleset changes made, organization created, or ratification claimed.
+- **2026-11-19:** Draft governance documents proposed for public consideration. The new Charter protects a Founder/Mission Steward role, meaningful community voice, and **non-bypassable-by-policy** independent safety and engineering approvals. This does **not** record ratification, a council, new GitHub permission, an election, organization creation or transfer.
 
-See [Charter](CHARTER.md), [decision records](DECISION_PROCESS.md), and [access/transition guide](ACCESS_AND_TRANSITION.md).
+Keep this page factual: a planned role is not an active office and a proposed rule is not a configured platform check.
