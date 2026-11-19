@@ -35,6 +35,10 @@ flowchart TD
 
 **Read the chart this way:** the founder leads strategic choices; the council represents members; independent engineering and safety reviewers hold separate approval gates; custodians execute only duly authorized actions. None is above the mission, safety rules, or participant rights. The arrows do **not** imply the founder can order a reviewer to approve code.
 
+## Special inaugural community role
+
+**Founding Maintainer (nominee: [@Elizabethjulie](https://github.com/Elizabethjulie))** — a protected recognition for the first non-founder member, subject to her acceptance. This is **not** a GitHub administrator or organization-owner appointment. A future operational GitHub `Maintain` role requires a separately authorized organization-level permission change; her current reported permission is `read`. [Details and safeguards](FOUNDING_MAINTAINER.md).
+
 ## Practical role hierarchy and protections
 
 | Role | How selected | Decisions and duties | Can check or challenge | Cannot bypass or control |
