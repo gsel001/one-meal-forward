@@ -1,31 +1,45 @@
-# Governance and moderation
+# Governance and Moderation
 
-> **Current state:** OneMealForward is a founder-administered, independent open-source volunteer project, not a registered nonprofit. There is **no elected council, second code owner, ratified constitution, or verified food-relief partner yet**. The [proposed Community Charter](docs/governance/CHARTER.md) sets out how authority can become democratically shared; it is not effective until its documented adoption conditions are met.
+> **Current state:** OneMealForward is a founder-administered, independent open-source initiative, **not** a registered nonprofit. It has no elected council, independent appeals panel, second code owner, or confirmed food-relief partner. The [Mission-First Stewardship Charter](docs/governance/CHARTER.md) is a **draft proposal**, not ratified governance.
 
-## Current stewardship and proposed transition
+## Our purpose
 
-@gsel001 is the founding maintainer and presently has final project decision-making and GitHub administration responsibility. This is a **transitional fact, not a permanent entitlement**. The goal is an elected, accountable governing council, independent technical review, conflict-of-interest procedures, and restricted administrative access.
+OneMealForward aims to fight hunger by connecting responsible technical volunteers with real, authorized needs of food-relief organizations. We do not invent verified partnerships, meals delivered or charitable outcomes. Every contribution should improve access, safety, reliability or real-world usefulness.
 
-The proposed structure and amendment protection are explained in:
+## Current founder stewardship and future accountability
 
-- [Community Charter — roles, elections, separation of powers, and protected amendments](docs/governance/CHARTER.md)
-- [GitHub permissions and safe transition from a one-person repository](docs/governance/ACCESS_AND_TRANSITION.md)
-- [Voting, decisions, record keeping, and constitutional change procedures](docs/governance/DECISION_PROCESS.md)
+`@gsel001` is the founding maintainer, currently responsible for strategy and personal GitHub repository administration. The **proposed** model recognizes a protected **Founder / Mission Steward** who leads mission-aligned strategy while being accountable to transparent consultation, independent engineering review and ethical safeguards.
 
-Do not claim the proposed council or voting protections are already enforceable. The current GitHub `main` ruleset requires an independent code-owner approval and passing checks; the founder cannot self-approve a founder-authored PR. `.github/CODEOWNERS` still names only `@gsel001`. Recruit and vet human reviewers before granting any access, and do not weaken these existing protections just to merge changes.
+**Protection of the founder is not permission to bypass safety.** The founder cannot legitimately self-approve founder-authored changes, evade branch rules, override a substantiated independent safety hold, retaliate against a critic, or change constitutional protections unilaterally. The founder is also protected against arbitrary demotion, factional takeover or discipline for mere disagreement, with objective for-cause procedures when necessary.
 
-Routine changes go through issues, pull requests and GitHub Discussions. Document tradeoffs and disagreements publicly. Substantial policy changes should have at least seven days of public feedback, absent urgent safety needs. **Once adopted, constitutional changes must follow the Charter's 14-day notice, council supermajority, eligible-community ratification, and independent PR-approval requirements.** The founder cannot create a legitimate exception by editing the policy alone.
+Every volunteer, including first-time contributors, can respectfully offer ideas, criticize decisions, report concerns and seek fair treatment. Important decisions should receive substantive responses, not ceremonial consultation.
 
-## Moderation and appeals
+Read the proposed:
+- [Mission-First Stewardship Charter](docs/governance/CHARTER.md)
+- [Visual role hierarchy and checks-and-balances matrix](docs/governance/ROLE_HIERARCHY.md)
+- [Rights, complaints, non-retaliation and appeals](docs/governance/COMMUNITY_RIGHTS.md)
+- [Decision rules, voting and amendment records](docs/governance/DECISION_PROCESS.md)
+- [Access, future organization transfer and founder custody safeguards](docs/governance/ACCESS_AND_TRANSITION.md)
+- [Actual current people, vacant roles and adoption status](docs/governance/ROSTER.md)
 
-Review organization submissions before creating website entries. Keep pending submissions off the public board until evidence is safe to publish. Remove spam and scams, redact sensitive data promptly, and use GitHub's sensitive-data removal process where necessary. Removing a comment cannot recall forks, notifications, caches or Git history. Never promise confidentiality on public issues.
+## Practical change control today
 
-Apply the [Code of Conduct](CODE_OF_CONDUCT.md) proportionately: clarification, warning, content removal, temporary restrictions, or bans when needed. Record privacy-preserving reasons and provide an appeal route. Currently there is one maintainer and no independent internal appeals panel; disclose that limitation. GitHub Trust & Safety can address platform abuse. When an independent panel exists, conflicted decision-makers must recuse.
+The current protected `main` branch requires passing CI, non-author code-owner review, and resolution of review threads. The founder cannot approve their own PR. The present `.github/CODEOWNERS` file names only `@gsel001`; **recruiting a second independent, vetted human reviewer is the immediate priority**. Do not weaken required checks to remove the resulting merge bottleneck.
 
-## Organization missions and safeguarding
+Routine work proceeds through public issues, Discussions and reviewable pull requests. Invite affected contributors into major decisions and explain tradeoffs. The founder has final current strategy authority; this does not eliminate technical/safety checks. While the formal council is unformed, **do not claim council endorsement or democratic adoption**.
 
-Follow [verification policy](docs/verification.md). Verification applies to a specific, authorized listing; it is not blanket accreditation of a food-relief organization. Do not publish unsafe contact routes, requests involving beneficiary identification, unexplained financial transfers, or unsupported aid claims. Suspend disputed listings and request evidence through official organizational channels. Never represent an issue closure as food distributed or a completed field outcome.
+## Moderation, complaints and appeals
 
-## Funding and other assets
+The [Code of Conduct](CODE_OF_CONDUCT.md) applies to everyone, including the founder. Handle criticism without retaliation. For serious moderation, provide notice, reasons, a proportionate response and a safe appeal path. Protect reports from unnecessary disclosure; a public GitHub issue is not confidential. An accused person must not decide their own case.
 
-No fundraising accounts or financial commitments are authorized. Any future bank account, application, expense, domain transfer, sponsorship or nonprofit claim requires a separate disclosed approval and applicable legal review. Until the proposed Charter is ratified, founder approval is necessary for those actions; that necessity is not a permanent veto after adoption. Distinguish project-development funding from aid donations, publish a budget, and avoid conflicted self-payments. Community participation must remain free.
+Currently the project cannot guarantee an independent internal panel. Use GitHub's abuse-reporting process for platform misconduct and [SECURITY.md](SECURITY.md) for vulnerabilities; do not claim unavailable private or legal investigation services. Active threats may warrant narrow temporary protective action, reviewed independently when possible.
+
+## Verified missions and funding limits
+
+Follow [verification policy](docs/verification.md). An organization must authorize its own participation; no unverified opportunities or claimed results may be published as confirmed. Remove scams, suspend disputed listings and do not post beneficiary identity or sensitive contact details.
+
+No donation collection, bank accounts, financial compensation, nonprofit claims or project asset transfers are authorized by this document. Any future spending, incorporation or transfer needs a separately recorded and legally reviewed decision. Volunteers never pay to participate.
+
+## Future GitHub organization
+
+A protected Founder / Mission Steward role is a **governance office**, separate from GitHub's organization-owner access. A future organization transfer must have separate founder consent, independent review, documented asset custody and continuity planning under the proposed charter. **Organization owners can still technically change other owners' roles.** Written rules alone cannot make a founder irrevocably an owner, nor make branch-protection bypass impossible for every administrator in every circumstance. Do not transfer, add owner accounts or change rulesets merely because this draft exists.
