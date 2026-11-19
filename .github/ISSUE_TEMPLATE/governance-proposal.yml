@@ -1,11 +1,11 @@
 name: "Governance proposal or Charter amendment"
-description: "Suggest a role, election, policy or constitutional change for public discussion. Submitting is not approval."
+description: "Suggest a policy, role, election, safeguarding or constitutional change. Discussion is not approval."
 title: "[Governance] "
 body:
   - type: markdown
     attributes:
       value: |
-        This form opens a **proposal**, not a vote or approved change. Read [GOVERNANCE.md](https://github.com/gsel001/one-meal-forward/blob/main/GOVERNANCE.md) and the [proposed Charter](https://github.com/gsel001/one-meal-forward/blob/main/docs/governance/CHARTER.md). A constitutional amendment cannot take effect without the Charter's notice, qualified council and member votes, and independently approved PR.
+        This form opens a **proposal**, not a vote or approved change. Read [GOVERNANCE.md](https://github.com/gsel001/one-meal-forward/blob/main/GOVERNANCE.md) and the [proposed Charter](https://github.com/gsel001/one-meal-forward/blob/main/docs/governance/CHARTER.md). Under the proposed Charter, a constitutional amendment requires public notice, independent reviews, qualified council and community support, and founder consent while the founder is serving and not conflicted. No individual can waive safety or independent review.
   - type: dropdown
     id: category
     attributes:
@@ -13,8 +13,10 @@ body:
       options:
         - Ordinary project governance
         - Role or permission change
-        - Council election or recall
+        - Representative election or recall
         - Constitutional amendment
+        - Repository ownership or organization transfer
+        - Safeguarding or member rights
         - Other / unsure
     validations:
       required: true
@@ -48,4 +50,6 @@ body:
         - label: I understand that submitting an issue or PR does not constitute a vote, council decision, or amendment.
           required: true
         - label: I have not included personal information, credentials, private partner records, or vulnerability exploitation details.
+          required: true
+        - label: I understand that no role, including the founder, can waive independent code review or legitimate safety requirements.
           required: true
