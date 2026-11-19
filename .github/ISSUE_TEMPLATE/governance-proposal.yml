@@ -1,0 +1,51 @@
+name: "Governance proposal or Charter amendment"
+description: "Suggest a role, election, policy or constitutional change for public discussion. Submitting is not approval."
+title: "[Governance] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form opens a **proposal**, not a vote or approved change. Read [GOVERNANCE.md](../../GOVERNANCE.md) and the [proposed Charter](../../docs/governance/CHARTER.md). A constitutional amendment cannot take effect without the Charter's notice, qualified council and member votes, and independently approved PR.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Ordinary project governance
+        - Role or permission change
+        - Council election or recall
+        - Constitutional amendment
+        - Other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Exact proposed change
+      description: Describe the current rule and proposed wording; link a draft diff when available.
+      placeholder: "Current text, proposed replacement, and scope..."
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Why this helps
+      description: Include alternatives, benefits, foreseeable risks, and affected contributors or partners.
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts of interest and affected permissions
+      description: State relevant conflicts or write "none known". Do not include private personal information.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Proposal safeguards
+      options:
+        - label: I understand that submitting an issue or PR does not constitute a vote, council decision, or amendment.
+          required: true
+        - label: I have not included personal information, credentials, private partner records, or vulnerability exploitation details.
+          required: true
