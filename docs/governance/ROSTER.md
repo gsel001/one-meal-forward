@@ -8,6 +8,7 @@ Last verified: **2026-11-19**. [Charter](CHARTER.md) · [visual hierarchy](ROLE_
 | --- | --- | --- | --- |
 | Founder / current project lead | **Active under existing governance** | [`@gsel001`](https://github.com/gsel001) | Founder personally owns the repository; the proposed **protected Mission Steward role** is not yet ratified |
 | Protected Founder / Mission Steward (proposed charter office) | **Proposed, not yet formally constituted** | Intended: `@gsel001` | Final strategy under the proposed charter, never an independent code/safety reviewer of own work |
+| Founding Maintainer — first community member (proposed) | **Nominated; acceptance/permissions unverified** | [`@Elizabethjulie`](https://github.com/Elizabethjulie) | Founder identifies as first non-founder member; proposed historical recognition and protected operational role are subject to consent, vetting and separate access action. [Safeguards](FOUNDING_MAINTAINER.md) |
 | Independent code owner / reviewer | **Vacant** | — | Vet and onboard a consenting human; current CODEOWNERS only lists founder |
 | Independent safety / ethics steward | **Vacant** | — | Must be able to challenge the founder, recuse and handle concerns fairly |
 | Advisory Council — two independent inaugural seats | **Vacant** | — | No council vote or recommendation can be claimed until two real people consent |
