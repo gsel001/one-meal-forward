@@ -1,81 +1,90 @@
-# Roles, permissions, and adoption roadmap
+# Governance Access, GitHub Ownership and Transition Plan
 
-> **Proposed governance; not a claim of existing appointments.** GitHub access and elected governance are different things.
+> **Proposal only — no new organization, role grants or ownership transfer has happened.** This guide implements the [Mission-First Charter](CHARTER.md) and [role hierarchy](ROLE_HIERARCHY.md) as far as the GitHub platform permits. The account with technical administrative powers is **not above** safety review or project policy.
 
-## Verified current repository state (2026-11-19)
+## Verified starting position (2026-11-19)
 
-- Repository: `gsel001/one-meal-forward`, owned by the **personal GitHub user** `gsel001`, not a GitHub organization.
-- `.github/CODEOWNERS` currently names only `@gsel001`.
-- The active `main` ruleset requires one approving review, code-owner approval, the latest-push approval rule, resolved threads, strict up-to-date `test` status, and squash merges. It blocks deletion and non-fast-forward changes; the ruleset reported no configured bypass actors.
-- A founder-authored PR cannot obtain approval from its own author. **No independent code owner has been appointed**, so a founder-authored governance or security PR may remain blocked until someone eligible joins.
-- Repository ownership/admin rights still reside with the personal account. A README or Charter cannot technically stop that account from changing settings. A GitHub organization improves role separation but does not make organization owners incapable of changing rules.
+- GitHub repository: `gsel001/one-meal-forward`, currently owned by a **personal account**, not a GitHub organization.
+- `.github/CODEOWNERS` currently lists only `@gsel001`. No non-founder code-owner appointment is recorded.
+- The existing enforced `main` ruleset has no listed bypass actors; requires a non-author code-owner approval, review after new pushes, resolved discussion threads, strict successful `test` check, and squash-only merges; also blocks forced updates and branch deletion.
+- The founder cannot approve their own pull request. Until a qualified non-founder code owner is appointed, some founder-authored PRs may remain blocked; **do not weaken protections to solve that inconvenience**.
+- The founder presently has account administration rights because the repository is personal. The proposed protected Founder/Mission Steward office is **a separate governance role**, not a GitHub-provided permission.
 
-Do not describe the proposed council, elections, enforceable amendment voting, or GitHub organization as already established.
+## Mapping roles to GitHub access
 
-## Map governance duties to least-privilege GitHub access
-
-| Project role | Typical GitHub capability, when granted | Approval and constraints |
+| Charter role | Minimum practical GitHub access | Safeguard before granting |
 | --- | --- | --- |
-| New volunteer / community member | Public read, issues, forks, discussions | No direct write by default; eligible voting membership is separate |
-| Community moderator | Triage, where available | Can organize discussions/issues, not silently grant repository write/admin |
-| Independent reviewer | Write plus explicit valid CODEOWNERS designation if serving as required code owner | Trial review first; cannot self-approve or bypass tests |
-| Engineering maintainer | Maintain or narrowly scoped write, only after track record and council decision | Merges only after proper independent review and CI; not automatically an org owner |
-| Security/ethics steward | Access only to security information needed and appropriate triage/manager role | Must not be sole author, approver, and deployer for sensitive changes |
-| Elected council representative | No extra code permissions merely from being elected | Sets policy via recorded vote, not by pushing code |
-| Organization administrator/custodian | Admin/organization owner only when essential | Two or more trusted people for continuity; security controls and public audit record; no unilateral constitutional power under the Charter |
+| Public participant / contributor | Public read, forks, PRs, issues, Discussions | No credentials or write required |
+| Eligible community voter | Same as participant; voting controlled by a separate verified roster | Voting membership does not create repository permissions |
+| Council representative | No additional GitHub rights automatically | Consent, clear term, conflict disclosure, voter verification |
+| Code reviewer / code owner | Write or appropriate review-capable access, with a valid CODEOWNERS designation for required code-owner reviews | Trial public review first; verified identity and competence; scoped access and revocation plan |
+| Engineering maintainer | Write/maintain as narrowly needed | Independent review and passing CI remain mandatory |
+| Safety / ethics steward | Appropriate security/triage information access, **not automatic repository admin** | Confidential reporting route, recusal, appeal and data safeguards |
+| Governance secretary | Read/triage and public roster management only | Cannot invent votes or grant themselves access |
+| Founder / Mission Steward | Strategic authority under Charter, plus current personal-account admin | No right to bypass PR checks or override safety holds |
+| GitHub organization custodian | Organization owner only where necessary for recovery and settings | Proven trust, explicit written role acceptance, 2FA, audit and signed/recorded custody duties |
 
-These are target assignments, not existing grants. Repository teams, security-manager roles, and multiple organization owners require an appropriate GitHub organization and supported plan/features.
+These are proposed duties, not existing invitations, teams, or permissions.
 
-## Safe bootstrap from one founder to independent review
+## Phase 1 — prepare independent review without weakening current protections
 
-1. Publish a call for experienced volunteer reviewers. Require consent, a visible track record, and a **trial public technical review without write access**. Do not treat a Discord message or AI-produced review as an authorized code-owner approval.
-2. Identify one suitable, consenting human. Provide only the minimum GitHub access needed for formal reviews. Before an access grant, document why, the scope, a revocation plan, and that they are not becoming an owner or admin.
-3. Ask the new reviewer to author a **focused CODEOWNERS PR** adding their exact GitHub username alongside `@gsel001` for appropriate files. On the current ruleset, the founder can independently review a candidate-authored PR. Do not attempt to have the founder approve the founder's own changes.
-4. After that CODEOWNERS update is independently reviewed and merged, test the intended workflow on a harmless PR: verify that the qualified non-author reviewer can formally approve the founder's PR while CI and last-push protections remain active.
-5. Recruit a second independent qualified person for policy/safety oversight. Collect explicit role acceptance. Announce the proposed three-person inaugural council, invite public feedback for at least seven days, and publish the nomination/selection record. This does **not** automatically ratify the Charter.
-6. Hold the inaugural adoption process and document the three sign-offs. Then open formal member registration and schedule an eligible-voter election. Do not treat founder nominations as a completed democratic election.
+1. Recruit qualified human reviewers. Request a **trial public code review** without write access; vet technical judgment and conduct before any privilege grant.
+2. Identify at least one consenting independent reviewer. Record scope, security expectations and ability to revoke access.
+3. Have the candidate prepare a small focused `CODEOWNERS` PR, adding their exact GitHub handle to relevant ownership. The founder can review a **candidate-authored** PR; the founder must not self-approve their own.
+4. Grant only necessary review permissions and test a harmless founder-authored PR through the actual protected branch. Confirm the non-author approval, existing `test` check and last-push rules work in GitHub.
+5. Recruit a separate qualified safeguarding adviser, not only another coder. Document capacity honestly before announcing a three-person advisory council.
+6. Seek founder and independent-adviser acceptance and public consultation before claiming adoption. Do not invent a vote, council, election or ratification.
 
-Until enough qualified people are present, **keep the existing protection rather than weakening approval requirements or inventing votes**. This may delay releases; report that limitation.
+## Phase 2 — carefully protect the founder before creating/moving to an organization
 
-## Planned migration to a GitHub organization
+**A future move into a GitHub organization requires a separately approved constitutional decision. This PR does not authorize a transfer.**
 
-Only after a separate decision and explicit approval from the repository owner:
+Before migration, require all of the following:
 
-- Create a GitHub organization with a mission-appropriate name, public description, security policy, and required 2FA for members as supported.
-- Establish teams such as `engineering-reviewers`, `maintainers`, `governance-oversight`, and `community-moderators`. Assign permissions based on function, not seniority or social reputation.
-- Select at least two highly trusted organization owners for continuity, and ideally a third for recovery; **do not make every council member an organization owner**. Require secure authentication and documented emergency credential recovery.
-- Document ownership of domain names, websites, financial accounts, and any other assets; a repository transfer does not transfer those assets or create a nonprofit.
-- Plan and review a repository transfer, including GitHub Pages URLs, links, integrations, permissions, secrets, and community communications. **Do not transfer or rename the current repository without explicit authorization.**
-- Recreate and verify an organization-owned CODEOWNERS file, reviewer teams, and organization/repository rulesets. Confirm actual ruleset enforcement in GitHub after migration.
+1. **Founder consent and custody:** the active, capable, nonconflicted Founder/Mission Steward must provide explicit dated written consent to the named destination organization, planned transfer, founder's post-transfer permissions, and continuity terms. A vote cannot substitute for consent except after the extraordinary final for-cause/succession process in Charter Article 9.
+2. **Constitutional approvals:** meet the council/community supermajority thresholds in Article 10, independent engineering and safety reviews, public proposal period and complete decision record. If too few people are available, **postpone the transfer**.
+3. **Founder is an organization owner at transfer:** appoint/retain the founder as an organization owner, not merely a repository collaborator, for as long as the founder serves and has not been lawfully removed through the approved for-cause process. This is a **required governance condition**, not a GitHub guarantee.
+4. **Two-person continuity:** have at least one additional highly trusted owner for recovery (GitHub recommends two owners), subject to written consent, conflict disclosure and least-privilege team roles for everyone else. Do not automatically appoint all council members owners.
+5. **Ownership/custody agreement:** document that other owners act as fiduciary-like custodians under project policy, may not arbitrarily demote the founder or remove protections, and must report proposed sensitive owner/asset changes. For meaningful enforceability, obtain appropriate legal advice and written agreements or entity bylaws; a Markdown charter alone does not create binding corporate obligations.
+6. **Protected assets and recovery:** inventory the domain, Pages site, DNS, integrations, deployment credentials, content, name/branding, public accounts, and any future funds. Document which assets remain in whose custody, backups, independent recovery, and safeguards against a single compromised account. Do not casually share passwords or duplicate sensitive credentials.
+7. **GitHub ownership and transfer restrictions:** configure available repository/organization policies so ordinary maintainers cannot transfer/delete repos or modify governance-sensitive rules; protect all main changes with independent reviews, and audit owner-role changes. The organization's owners can still edit some settings, including owner membership.
+8. **Dry run and post-transfer verification:** test required checks, team CODEOWNERS, review protections, organization rulesets, GitHub Pages URL/redirects, DNS, links, branch history, permissions and automation. If the transfer breaks safeguards, suspend risky deployments while qualified owners restore them.
+9. **Exit/incident procedure:** maintain a written process for attempted unauthorized founder demotion, lost accounts, owner misconduct and legitimate Article 9 final removal. Preserve records and backups; involve neutral governance/legal recourse where appropriate. **Do not promise automatic technical restoration or irrevocable ownership.**
 
-## Technical safeguards for constitutional files
+### The unavoidable platform limitation
 
-After there are enough independent authorized reviewers, configure applicable branch/ruleset protections for these sensitive files:
+GitHub **organization owners have complete administrative access and can change other owners' roles**. Additional organization owners help prevent account-loss lockout, but do **not** create a technical guarantee that the founder can never be demoted. Even a no-bypass repository ruleset cannot make the GitHub owner role irrevocable. Written governance, careful appointments, independent oversight, asset continuity and, when appropriate, legal agreements reduce this risk; they cannot fully remove it.
 
-- `GOVERNANCE.md`
-- `docs/governance/**`
-- `.github/CODEOWNERS`
-- relevant workflows, permission policies, and branch/ruleset configuration
+**Do not move the repository** if preserving founder control is paramount but you are unwilling to accept this residual risk. Keep the current personal ownership until the team has matured and the agreed protections are ready.
 
-Require public PRs, passing status checks, no bypass for ordinary maintainers, resolved threads, fresh approval after pushes, and **at least two independent non-author approvals** for constitutional changes. Where GitHub's supported required-team-reviewer features permit, require separate engineering and governance-oversight reviewer teams.
+### Legitimate exception: founder accountability
 
-**Do not assume CODEOWNERS alone requires every named owner to approve.** GitHub's code-owner approval is satisfied by an appropriate owner; adding two names to a line does not itself create a two-signature rule. GitHub also cannot intrinsically count an off-platform community vote just because a Markdown document demands one. A documented recorded vote must be checked by independent humans, and technical protections should be tested on a sample PR.
+Protected stewardship is **not immunity for serious misconduct**. Allegations against the founder require independent examination and a fair appeal under Charter Article 9. The founder has no veto over their own case and cannot undermine safety during investigation. Arbitrary or politically motivated demotion remains prohibited under governance; lawful, properly decided removal or succession is an explicit exception, and actual GitHub permissions must then be changed by properly authorized custodians.
 
-Do not raise the global required review count to two while the repository has fewer than two eligible, non-author reviewers: that can prevent all merges. Harden those settings when the team can actually satisfy them, without removing existing protections in the interim.
+## Phase 3 — organization teams and technical enforcement
 
-## Rollout and verification checklist
+Once a transfer is separately authorized:
 
-- [ ] At least one independent trial code review received
-- [ ] Consenting candidate identified and scope of access recorded
-- [ ] Candidate-authored CODEOWNERS PR independently approved and merged
-- [ ] Founder-authored test PR successfully receives non-author code-owner approval
-- [ ] Second independent steward recruited and conflicts recorded
-- [ ] Three-person inaugural council seats publicly accepted (not merely nominated)
-- [ ] Adoption consultation and independent sign-offs publicly recorded
-- [ ] Voting-member registry and secure voting method established
-- [ ] First election completed with actual quorum and tally record
-- [ ] Constitutional amendment protections tested in GitHub
-- [ ] Organization migration separately authorized and verified, if desired
-- [ ] All privileged access reviewed at least quarterly
+- Create teams corresponding to **Engineering Reviewers**, **Maintainers**, **Safety & Ethics**, **Governance Records**, and **Community Moderators**. Do not give teams blanket owner access.
+- Assign CODEOWNERS to real consenting humans or valid teams. **Two names in CODEOWNERS do not force two signatures**; use supported ruleset/required-reviewer settings or another independently audited merge gate to actually require multiple reviewers where supported.
+- Configure appropriately scoped rulesets for `GOVERNANCE.md`, `docs/governance/**`, `.github/CODEOWNERS`, workflows and sensitive release/verification files, using independent reviewers from at least two distinct functions.
+- Preserve strict protected `test` CI and fresh approvals after pushes; verify a harmless PR cannot merge without the required approvals. Review safety holds separately, since GitHub cannot read a constitutional decision merely because one was posted in a document.
+- Require periodic access reviews and prompt public-safe reporting for sensitive setting changes. Never assign organization-owner privileges merely to avoid PR review.
 
-See [the proposed Charter](CHARTER.md) and [decision records](DECISION_PROCESS.md).
+**Do not enforce a two-independent-reviewer requirement before two qualified non-author reviewers exist**, or the project can become permanently stuck. Defer sensitive releases; do not make security rules weaker.
+
+## Rollout checklist
+
+- [ ] Founder and volunteers understand the difference between founder authority and GitHub ownership.
+- [ ] One independently vetted reviewer consents and completes a trial review.
+- [ ] Candidate-authored CODEOWNERS update passes protected review; actual founder PR review is tested.
+- [ ] A separate safeguarding/ethics reviewer accepts a role.
+- [ ] Proposed council members accept; charter consultation and adoption recorded.
+- [ ] Community electorate, votes and appeal procedure exist before binding constitutional referenda.
+- [ ] Founder-protected ownership and emergency account-recovery terms are documented.
+- [ ] GitHub organization migration has an independent security assessment and **separate founder consent**.
+- [ ] Actual GitHub permissions/rulesets/Pages are verified before and after any transfer.
+- [ ] A legal/asset-custody plan is reviewed before any claim of enforceable organizational ownership.
+- [ ] No access, invitation, repository transfer, deployment or funding action is treated as approved merely because this PR is merged.
+
+See [Charter](CHARTER.md), [Role Hierarchy](ROLE_HIERARCHY.md), [Decision Process](DECISION_PROCESS.md), and [Roster](ROSTER.md).
