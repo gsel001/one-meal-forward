@@ -32,6 +32,18 @@ Following the nominee's affirmative acceptance, record two different things:
 6. **No exception to code safeguards:** The Founding Maintainer also cannot self-approve PRs, override CI, bypass a safety hold, change branch rules unilaterally or grant themselves extra privileges. Everyone, including the founder, follows the same independent gates.
 7. **Recognition changes are protected:** The factual first-member designation may only be corrected with published objective evidence, prior notice and independent review. It may not be deleted through routine politics or a unilateral documentation edit. After the Charter is adopted, attempts to weaken these protections follow its constitutional amendment procedure.
 
+## Individual account and repository safeguards
+
+Before operational permissions are granted, recommend that the nominee enable GitHub **two-factor authentication** (preferably passkeys or security keys), store recovery codes securely, review active sessions and connected apps, and use unique account credentials. Never ask for passwords, recovery codes, personal access tokens, or private identity documents. The project should not claim 2FA has been verified unless GitHub actually provides an authorized check.
+
+For the founder and nominee alike:
+
+- Preserve the protected `main` ruleset, non-author approval, CI, stale-approval dismissal and resolved review requirements.
+- Use project roles and GitHub permissions at the minimum needed, audited at least quarterly and after a material role change.
+- Treat a lost or compromised GitHub account as a **security incident**, not automatically as misconduct. Temporarily suspend risky access if necessary, preserve evidence safely, review independently and restore only when the account is secured.
+- Do not give the Founding Maintainer an administrator bypass, deployment secret or branch-protection exception merely because of her special historical recognition.
+- When an organization is created, use a narrowly scoped **Maintain** repository permission if her technical responsibilities warrant it, with organization-wide 2FA requirements where supported. Being a founding member does not itself qualify someone as a GitHub organization owner.
+
 ## Practical GitHub rollout
 
 The repository currently belongs to a **personal GitHub account**. Such repositories offer **Owner** and **Collaborator** roles, not an independently assignable GitHub `Maintain` role. The connected permission check for `@Elizabethjulie` reported `read`; **this is not proof of collaborator write access**.
