@@ -8,7 +8,7 @@ OneMealForward is a free, open-source project making action against hunger acces
 
 ## What works today
 
-- A responsive mission board with search and location, language, skill, availability, effort, and verification filters.
+- A responsive mission board with accent-tolerant search and shareable links for location, language, skill, availability, effort, and verification filters.
 - Real beginner tasks for this project: writing, translation, research, design, accessibility, and testing.
 - Organization mission submissions through moderated GitHub Issues.
 - Evidence-linked review and expiry status; expired or pending entries cannot recruit through the board.
