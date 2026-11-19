@@ -22,6 +22,10 @@ Read the proposed:
 - [Access, future organization transfer and founder custody safeguards](docs/governance/ACCESS_AND_TRANSITION.md)
 - [Actual current people, vacant roles and adoption status](docs/governance/ROSTER.md)
 
+## First community Founding Maintainer (nomination)
+
+The founder has nominated [@Elizabethjulie](https://github.com/Elizabethjulie) for a specially protected **Founding Maintainer** position to recognize the first non-founder community member. Her explicit role acceptance, formal GitHub access and technical code-owner qualifications remain unverified; this is **not** an active GitHub permission grant. Read the [proposed Founding Maintainer protections](docs/governance/FOUNDING_MAINTAINER.md), including nonretaliation, impartial review before nonemergency removal, temporary security containment and the right to appeal. These rights do not waive independent PR approval for the founder or the maintainer.
+
 ## Practical change control today
 
 The current protected `main` branch requires passing CI, non-author code-owner review, and resolution of review threads. The founder cannot approve their own PR. The present `.github/CODEOWNERS` file names only `@gsel001`; **recruiting a second independent, vetted human reviewer is the immediate priority**. Do not weaken required checks to remove the resulting merge bottleneck.
