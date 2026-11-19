@@ -63,6 +63,12 @@ The [role hierarchy and decision matrix](ROLE_HIERARCHY.md) is the implementatio
 
 A person may cover more than one role in the startup phase but **never independently reviews their own work or adjudicates a complaint against themselves**. Sensitive approvals require genuinely distinct nonconflicted humans.
 
+### Founding Maintainer — first community member
+
+[@Elizabethjulie](https://github.com/Elizabethjulie) is **nominated, not yet appointed**, as OneMealForward's first non-founder **Founding Maintainer**. The exact protections, responsibilities, separate historical recognition, annual operational tenure, security controls, acceptance requirements and fair independent removal/appeal procedures are defined in [Founding Maintainer](FOUNDING_MAINTAINER.md). A nomination does **not** grant GitHub write privileges, code-owner approval rights, a council vote or ownership. Her consent and appropriate technical assessment are required before formal appointment.
+
+Founding recognition, once accurately established and accepted, is protected from retaliation or arbitrary erasure; technical access may still be temporarily restricted during a genuine security incident and removed for cause through fair process. The founder cannot simply revoke the Founding Maintainer's position because she disagrees with a proposal or refuses to approve unsafe code. The maintainer cannot bypass independent review, alter permissions, or claim status above other volunteers. These protections are proposed until adoption.
+
 ## Article 5 — Council representation and eligibility
 
 1. The **inaugural Advisory Council** consists of the founder as ex-officio Mission Steward and two **independent, consenting non-founder advisers**, preferably one engineering and one community/safeguarding. The council does not exist until appointments are accepted and recorded.
