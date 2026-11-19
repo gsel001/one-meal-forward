@@ -16,7 +16,7 @@ The [official repository](https://github.com/github/forgoodfirstissue#adding-a-n
 
 ### 3. Open Source Collective — fiscal hosting, not an automatic grant
 
-Review [eligibility](https://docs.oscollective.org/interested-in-joining-osc/acceptance-criteria), [terms](https://docs.oscollective.org/welcome-and-introduction-to-osc/terms-of-fiscal-sponsorship), and [application instructions](https://docs.oscollective.org/how-to-apply). The eligibility page could not be retrieved during this research, so do not assume acceptance or rely on historical star thresholds. The application checklist prefers two project administrators and offers GitHub or manual verification. [Apply here](https://opencollective.com/opensource/apply/intro) only after founder approval. [Fees](https://docs.oscollective.org/welcome-and-introduction-to-osc/fees) currently include 10% of incoming funds plus variable processor charges; there is no recurring hosting charge. This is therefore not cost-free fundraising. Founder review of eligibility, administrator responsibilities, and terms is required before applying.
+Review [eligibility](https://docs.oscollective.org/interested-in-joining-osc/acceptance-criteria), [terms](https://docs.oscollective.org/welcome-and-introduction-to-osc/terms-of-fiscal-sponsorship), and [application instructions](https://docs.oscollective.org/how-to-apply). The current software-project criteria require an organizational repository rather than a personal account, active work or usage, an open-source license, and an authorized project representative. This repository is under a personal account, so it is not ready under those standard criteria. Do not transfer ownership or create an organization without founder approval. The application checklist prefers two project administrators and offers GitHub or manual verification. [Apply here](https://opencollective.com/opensource/apply/intro) only after founder approval. [Fees](https://docs.oscollective.org/welcome-and-introduction-to-osc/fees) currently include 10% of incoming funds plus variable processor charges; there is no recurring hosting charge. This is therefore not cost-free fundraising. Founder review of eligibility, administrator responsibilities, and terms is required before applying.
 
 ### 4. Awesome Foundation Detroit — possible local pilot grant
 
@@ -24,7 +24,7 @@ The [Detroit chapter](https://www.awesomefoundation.org/en/chapters/detroit) lis
 
 ### 5. NLnet — technical open-source grants, conditional fit
 
-[Funding overview](https://nlnet.nl/funding.html) and [official proposal form](https://nlnet.nl/propose/) describe technical-development funding for open internet work, typically €5,000–€50,000 for an initial grant. Outputs must be openly licensed. Fund-specific themes and European-dimension rules apply. A general hunger volunteer website may not fit: first identify a relevant technical public-interest deliverable and matching fund. The displayed next deadline was 2027-01-03 at noon CET; recheck before planning. Applicants must follow the current human-authorship/AI policy and write their own proposal. Do not submit this AI-produced research as a proposal. No eligibility claim or application is made.
+[Funding overview](https://nlnet.nl/funding.html) and [official proposal form](https://nlnet.nl/propose/) describe technical-development funding for open internet work, typically €5,000–€50,000 for an initial grant. Outputs must be openly licensed. Fund-specific themes and European-dimension rules apply. A general hunger volunteer website may not fit: first identify a relevant technical public-interest deliverable and matching fund. The form currently says proposals cannot be submitted and lists 2027-01-03 at noon CET as the next deadline; recheck availability before planning. Applicants must follow the current human-authorship/AI policy and write their own proposal. Do not submit this AI-produced research as a proposal. No eligibility claim or application is made.
 
 ### 6. Humanitarian innovation — later-stage research
 
@@ -43,3 +43,15 @@ The [UNICEF open-call page](https://www.unicef.org/innovation/open-call-applicat
 ## Recommended order
 
 Launch and maintain the free static site first. Seek contributor discovery next. Consider Sponsors or fiscal hosting only with an approved, transparent development budget and the founder's willingness to manage payouts and compliance. Explore a Detroit grant only for a real local activity. Recheck this document quarterly and record changes; remove stale deadlines rather than treating them as rolling invitations.
+
+## Founder compensation and corporate support: preparation only
+
+GitHub Sponsors is the most direct route to investigate for individual maintainer support. Official [setup requirements](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account) include residence in a supported region, a profile, payout/tax information and 2FA. The founder must confirm those private eligibility details and approve proceeding. Do not infer residence or account readiness from a university email. No profile, tier or payment link is activated here.
+
+A corporate proposal should name a limited engineering scope, recipient, reviewer, budget, license, support limits and reporting method. Prepare it as an unsent draft; do not name a company as a sponsor, promise developer time, offer partner access or sell verification. Volunteer contributions are not a promise of free commercial support.
+
+Separately contracted services may pay the founder or an agreed developer only under separately approved terms. They cannot replace an agreed free mission with an invoice. Review actual demand and capacity before setting a rate or recurring obligation. See the proposed compensation and conflict rules in [the operating plan](three-goal-operating-plan.md); they do not change current approval requirements.
+
+The Detroit grant is a possible fit for a concrete local activity, not a dependable salary or general operating grant. Open Source Collective requires a repository/governance change before this project meets its standard software criteria. NLnet's current submission window, technical theme, European-dimension and human-authorship rules are additional barriers; it is not an immediate generic hunger-project grant. Do not claim any of these programs will fund founder compensation.
+
+Before any application or account: approve the purpose and recipient, check current eligibility and fees, prepare an itemized budget, separate development support from aid, and decide who reviews conflicts and reports spending. No financial commitment is made by this research.
