@@ -3,7 +3,6 @@ const grid = document.querySelector('#mission-grid');
 const count = document.querySelector('#result-count');
 const empty = document.querySelector('#empty');
 const form = document.querySelector('#filters');
-const icons = { Writing: '✎', Translation: '文', Accessibility: '◎', Research: '⌕', Design: '◇', Testing: '✓' };
 function element(tag, text, className) {
   const node = document.createElement(tag); if (text) node.textContent = text;
   if (className) node.className = className; return node;
@@ -16,9 +15,8 @@ function card(m, strings) {
   const status = effectiveStatus(m);
   const article = element('article', '', 'mission-card');
   const top = element('div', '', 'card-top');
-  const icon = element('span', icons[m.skill] || '↗', 'skill-icon'); icon.setAttribute('aria-hidden', 'true');
   const badge = status === 'verified' && m.kind === 'organization' ? 'Verified organization' : strings[status];
-  top.append(icon, element('span', badge, `badge ${status}`));
+  top.append(element('span', badge, `badge ${status}`));
   const title = element('h3', m.title); title.id = `mission-${m.id}`; article.setAttribute('aria-labelledby', title.id);
   const tags = element('div', '', 'tags');
   [m.skill, m.location, m.mode, ...m.languages].forEach(t => tags.append(element('span', t)));

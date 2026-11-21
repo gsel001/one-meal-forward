@@ -18,3 +18,41 @@ test('keyboard skip link, safe search and load error fallback',async({page})=>{
  await page.route('**/data/missions.json',route=>route.abort());await page.reload();await expect(page.locator('#result-count')).toContainText('could not be loaded');await expect(page.locator('#empty a')).toHaveAttribute('href',/github.com/);
 });
 test('JavaScript-free fallback',async({browser})=>{const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://127.0.0.1:4173');await expect(page.getByRole('link',{name:'browse all beginner tasks on GitHub'})).toBeVisible();await context.close();});
+
+test('a first-time non-coder can find a task and understand comment submission',async({page},testInfo)=>{
+ await page.goto('/');
+ await expect(page.getByText('No coding experience required to contribute.',{exact:true})).toBeVisible();
+ await expect(page.getByRole('link',{name:'I don’t code',exact:true})).toBeInViewport();
+ await page.getByRole('link',{name:'I don’t code',exact:true}).click();
+ const path=page.locator('#non-coders');
+ await expect(path).toContainText('A free GitHub account is required to submit work.');
+ await expect(path).toContainText('No terminal, installation, fork or pull request is required');
+ await path.getByText('What to put in your comment').click();
+ await expect(path.locator('pre')).toContainText('Public source URL and date checked:');
+ await expect(path).toContainText('Do not include private contacts');
+ await expect(path.getByRole('link',{name:'public information research'})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/issues/6');
+ await page.getByLabel('Your skill').selectOption('Research');
+ await expect(page.locator('.mission-card')).toHaveCount(4);
+ await expect(page.locator('.mission-card').first().getByRole('link',{name:/View task on GitHub/})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/issues/6');
+ await page.getByRole('button',{name:'Clear filters'}).click();
+ await page.goto('/');await page.screenshot({path:testInfo.outputPath('participation.png')});
+});
+
+test('developer can locate source, checks and the independent-review gate',async({page})=>{
+ await page.goto('/');const path=page.locator('#developers');
+ await expect(path.getByRole('link',{name:'Website code: site/'})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/tree/main/site');
+ await expect(path.getByRole('link',{name:'Tests: tests/'})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/tree/main/tests');
+ await expect(path.getByRole('link',{name:'CI results'})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/actions');
+ await expect(path.getByRole('link',{name:'Review the independent reviewer task'})).toHaveAttribute('href','https://github.com/gsel001/one-meal-forward/issues/35');
+ await expect(path).toContainText('Founder-authored PRs need another authorized reviewer.');
+ await expect(path).toContainText(/staff acceptance and actual use are separate/i);
+});
+
+test('320px reflow keeps contribution instructions and filters usable',async({page})=>{
+ await page.setViewportSize({width:320,height:800});await page.goto('/');
+ await expect(page.locator('.mission-card')).toHaveCount(6);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ await page.getByLabel('Your skill').selectOption('Writing');
+ await expect(page.locator('.mission-card')).toHaveCount(5);
+ await page.getByRole('button',{name:'Clear filters'}).click();await expect(page.locator('.mission-card')).toHaveCount(6);
+});
