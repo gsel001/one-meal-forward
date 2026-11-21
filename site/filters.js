@@ -10,7 +10,8 @@ export function expiryTime(mission) {
 export function effectiveStatus(mission, now = new Date()) {
   if (mission.example) return 'example';
   const expiry = expiryTime(mission);
-  if (!Number.isFinite(expiry) || now.getTime() >= expiry) return 'expired';
+  const currentTime = now.getTime();
+  if (!Number.isFinite(expiry) || !Number.isFinite(currentTime) || currentTime >= expiry) return 'expired';
   return mission.status;
 }
 export function filterMissions(missions, filters, now = new Date()) {

@@ -51,3 +51,10 @@ test('expiry rolls over at midnight UTC after a month or year ends', () => {
     assert.equal(effectiveStatus({ ...mission, status: 'expired' }, now), 'expired');
   }
 });
+
+test('an invalid clock cannot verify a mission', () => {
+  const invalidClock = new Date(NaN);
+  assert.equal(effectiveStatus(base, invalidClock), 'expired');
+  assert.equal(filterMissions([base], { status: 'verified' }, invalidClock).length, 0);
+  assert.equal(effectiveStatus({ ...base, example: true }, invalidClock), 'example');
+});
