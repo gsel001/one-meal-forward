@@ -35,7 +35,7 @@ Both partners follow the same engineering and ethical safeguards:
 - If both materially authored a change, obtain qualified independent review from another human; if unavailable, defer the change rather than bypass review.
 - Major decisions need mutual consent in addition to applicable engineering review. AI assistance does not replace human accountability.
 
-A review comment, code ownership or administrative capability does not establish consent to a major decision.
+A review comment, code ownership or administrative capability does not establish consent to a major decision. Aim for no more than two or three actively reviewed PRs at a time; prioritize security and one useful authorized humanitarian deliverable before starting more feature work.
 
 ## 5. Security and continuity
 
@@ -49,7 +49,7 @@ Platform owners may retain technical powers that this agreement cannot constrain
 
 Welcome technical and nontechnical contributions, including research, accessibility, translation, design, testing and documentation. Recognize contributions fairly; protect respectful dissent, privacy and sustainable workloads. Apply the code of conduct consistently, recuse from conflicts and provide a fair route for concerns and appeals. Do not claim an independent panel exists until one is established.
 
-Volunteer and maintainer roles are distinct from project ownership. Additional co-owners would require mutual agreement.
+Volunteer and maintainer roles are distinct from project ownership. Keep entry paths accessible, including comment-only contributions. Agree on recruitment priorities together; maintain respectful communication with existing applicants. No additional co-owners are contemplated in this proposal; any future change would require mutual agreement.
 
 ## 7. Humanitarian integrity
 
@@ -77,7 +77,7 @@ Before any organization creation, repository transfer or expansion of administra
 
 GitHub organization ownership is an administrative role, not proof of equal equity or legal ownership; this draft does not guarantee a technically enforced mutual veto.
 
-Invite both founding participants to revise this text freely. Before adoption, reconcile the final agreement with current GOVERNANCE.md and maintain live role/access facts in one dated roster rather than duplicating them. Follow existing public consultation and review requirements, including the normal seven-day feedback period for substantial policy changes. Record explicit mutual agreement and valid independent review; no automatic adoption or merge. Where an independent reviewer is required but unavailable, defer adoption.
+Both founding participants may lead proposals, request changes and revise this text freely. Neither is expected to simply endorse the other's draft. Before adoption, reconcile the final agreement with current GOVERNANCE.md and maintain live role/access facts in one dated roster rather than duplicating them. Follow existing public consultation and review requirements, including the normal seven-day feedback period for substantial policy changes. Record explicit mutual agreement and valid independent review; no automatic adoption or merge. Where an independent reviewer is required but unavailable, defer adoption.
 
 After adoption, amendments require the same mutual consent and applicable review. Keep the agreement proportionate to the project's size.
 
