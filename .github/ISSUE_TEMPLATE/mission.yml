@@ -1,11 +1,11 @@
 name: Suggest an organization mission
 description: Public organizational requests are moderated before publication.
-title: "[Mission]: "
-labels: ["mission submission", "pending verification"]
+title: '[Mission]: '
+labels: ['mission submission', 'pending verification']
 body:
   - type: markdown
     attributes:
-      value: "This is PUBLIC. Do not submit beneficiary details, personal contacts, private correspondence, or aid applications. Submission does not create a partnership or website listing. Use official organization channels only."
+      value: 'This is PUBLIC. Do not submit beneficiary details, personal contacts, private correspondence, or aid applications. Submission does not create a partnership or website listing. Use official organization channels only.'
   - type: input
     id: organization
     attributes:

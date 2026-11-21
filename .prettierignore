@@ -1,0 +1,21 @@
+# Dependencies, generated output and local tool caches.
+node_modules/
+dist/
+playwright-report/
+test-results/
+.git/
+.venv/
+.ruff_cache/
+**/__pycache__/
+
+# npm manages this file; preserve the legal text and unsupported image formats.
+package-lock.json
+LICENSE
+**/*.svg
+**/*.xml
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.webp
+**/*.ico
