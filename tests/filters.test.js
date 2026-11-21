@@ -7,5 +7,17 @@ test('all six filters and case-insensitive search combine',()=>{assert.equal(fil
 test('examples excluded from every public query',()=>assert.equal(filterMissions([{...base,example:true}],{},now).length,0));
 test('expiration overrides verified badge and filter',()=>{const expired={...base,expiresAt:'2026-11-17'};assert.equal(effectiveStatus(expired,now),'expired');assert.equal(filterMissions([expired],{status:'verified'},now).length,0);assert.equal(effectiveStatus({...base,expiresAt:'2026-11-18'},now),'verified');});
 test('pending records stay pending',()=>assert.equal(effectiveStatus({...base,status:'pending'},now),'pending'));
+test('expiry includes the final millisecond of the UTC day and changes at midnight',()=>{
+ const mission={...base,expiresAt:'2028-02-29'};
+ const before=new Date('2028-02-29T23:59:59.999Z');
+ const boundary=new Date('2028-03-01T00:00:00.000Z');
+ assert.equal(effectiveStatus(mission,before),'verified');
+ assert.equal(filterMissions([mission],{status:'verified'},before).length,1);
+ assert.equal(effectiveStatus(mission,boundary),'expired');
+ assert.equal(filterMissions([mission],{status:'verified'},boundary).length,0);
+ assert.equal(filterMissions([mission],{status:'expired'},boundary).length,1);
+ assert.equal(effectiveStatus({...mission,status:'pending'},before),'pending');
+ assert.equal(effectiveStatus({...mission,status:'pending'},boundary),'expired');
+});
 test('unsafe protocols and embedded credentials rejected',()=>{for(const value of ['javascript:alert(1)','data:text/html,hi','http://example.org','not a url','https://user:password@example.org'])assert.equal(safeUrl(value),null);assert.equal(safeUrl('https://example.org/'),'https://example.org/');});
 test('impact only counts reviewed evidence-linked contributions',()=>assert.equal(reviewedContributions({contributions:[{status:'reviewed',reviewer:'reviewer',evidence:'https://github.com/gsel001/one-meal-forward/pull/1'},{status:'pending',reviewer:'reviewer',evidence:'https://example.org'},{status:'reviewed',evidence:'https://example.org'}]}).length,1));
