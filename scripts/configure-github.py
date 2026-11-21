@@ -9,6 +9,7 @@ import subprocess
 from pathlib import Path
 
 REPO = "gsel001/one-meal-forward"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = Path("site/data/missions.json")
 LAUNCH_TASKS = Path("scripts/launch-issues.json")
 
@@ -27,7 +28,7 @@ MILESTONES = (
 
 
 def api(endpoint, method="GET", data=None):
-    args = ["gh", "api", endpoint, "--method", method]
+    args = ["gh", "api", "--hostname", "github.com", endpoint, "--method", method]
     if data is not None:
         args += ["--input", "-"]
     response = subprocess.run(
@@ -38,7 +39,7 @@ def api(endpoint, method="GET", data=None):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
     parser.add_argument(
         "--apply", action="store_true",
         help="Perform one-time GitHub initialization only if mission data does not exist."
@@ -51,7 +52,15 @@ def main(argv=None):
         return 0
 
     # Verify launch conditions before any authenticated GitHub API requests.
-    if MANIFEST.exists():
+    if Path.cwd() != REPOSITORY_ROOT:
+        parser.error("Run from the OneMealForward repository root containing this script.")
+    try:
+        MANIFEST.lstat()
+    except FileNotFoundError:
+        pass
+    except OSError as error:
+        parser.error("Unable to inspect the mission catalogue: " + str(error))
+    else:
         print("EXISTING SITE PRESERVED: " + str(MANIFEST) +
               " already exists. No GitHub API calls or local writes were made.")
         return 0
@@ -62,37 +71,59 @@ def main(argv=None):
         package = json.loads(package_path.read_text(encoding="utf-8"))
     except (ValueError, OSError) as error:
         parser.error("Unable to inspect package.json: " + str(error))
-    if package.get("name") != "one-meal-forward":
+    if not isinstance(package, dict) or package.get("name") != "one-meal-forward":
         parser.error("Refusing to modify GitHub from a different project.")
+
+    try:
+        tasks = json.loads(LAUNCH_TASKS.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as error:
+        parser.error("Unable to read the launch task manifest: " + str(error))
+    if not isinstance(tasks, list) or not tasks:
+        parser.error("Launch task manifest must be a nonempty list.")
+    for index, task in enumerate(tasks, start=1):
+        if not isinstance(task, dict):
+            parser.error(f"Launch task {index} must be an object.")
+        for field in ("title", "body"):
+            value = task.get(field)
+            if not isinstance(value, str) or not value.strip():
+                parser.error(f"Launch task {index} must have a nonempty {field} string.")
+        labels = task.get("labels")
+        if not isinstance(labels, list) or any(
+            not isinstance(label, str) or not label.strip() for label in labels
+        ):
+            parser.error(f"Launch task {index} labels must be a list of nonempty strings.")
 
     user = api("user")
     if user.get("login", "").lower() != "gsel001":
         parser.error("Authenticated GitHub CLI user is not the expected repository owner.")
 
-    tasks = json.loads(LAUNCH_TASKS.read_text(encoding="utf-8"))
-    if not isinstance(tasks, list) or not tasks:
-        parser.error("Launch task manifest must be a nonempty list.")
-
     # Public issue titles and contents are not proof of provenance or review.
     # Never adopt existing issues, even if they appear to match launch tasks.
     # One result is enough to reject a nonempty repository; no pagination needed.
-    if api("repos/" + REPO + "/issues?state=all&per_page=1"):
+    existing_items = api("repos/" + REPO + "/issues?state=all&per_page=1")
+    if not isinstance(existing_items, list):
+        parser.error("Unable to confirm that the repository has no issues or pull requests.")
+    if existing_items:
         parser.error("Repository already has issues or pull requests. "
                      "No changes made; use reviewed pull requests for maintenance.")
 
     existing_labels = {label["name"] for label in api("repos/" + REPO + "/labels?per_page=100")}
+    milestones = {
+        milestone["title"]: milestone["number"]
+        for milestone in api("repos/" + REPO + "/milestones?state=all&per_page=100")
+    }
     for name, color in LABELS.items():
         if name not in existing_labels:
             api("repos/" + REPO + "/labels", "POST", {
                 "name": name, "color": color, "description": name.capitalize()
             })
-    milestones = api("repos/" + REPO + "/milestones?state=all&per_page=100")
     for title, description in MILESTONES:
-        if not any(m["title"] == title for m in milestones):
-            milestones.append(api("repos/" + REPO + "/milestones", "POST", {
+        if title not in milestones:
+            milestone = api("repos/" + REPO + "/milestones", "POST", {
                 "title": title, "description": description
-            }))
-    milestone_id = next(m["number"] for m in milestones if m["title"] == "Community launch")
+            })
+            milestones[title] = milestone["number"]
+    milestone_id = milestones["Community launch"]
 
     for task in tasks:
         api("repos/" + REPO + "/issues", "POST", {
