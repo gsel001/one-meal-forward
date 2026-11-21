@@ -134,3 +134,53 @@ test('long expiry delays do not overflow into immediate repeated refreshes', asy
   await expect(firstCard(page).locator('[data-mission-action]')).toHaveCount(0);
   await expect(page.locator('#partner-count')).toHaveText('0');
 });
+
+test('initial and filtered rendering succeed with no active element', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(document, 'activeElement', { configurable: true, get: () => null });
+  });
+  await loadMissions(page);
+  await page.getByLabel('Search missions', { exact: true }).fill('mission 1');
+  await expect(page.locator('.mission-card')).toHaveCount(1);
+  await expect(page.locator('#result-count')).toHaveText('1 missions match · showing 1');
+});
+
+test('malformed expiry removes recruitment actions and verified partner counts', async ({ page }) => {
+  const data = missions.map((mission, index) => index < 6 ? {
+    ...mission, kind: 'organization',
+    expiresAt: [undefined, null, '', 'invalid', '2027-02-29', ['2027-01-01']][index],
+  } : mission);
+  await loadMissions(page, data);
+  await expect(page.locator('#partner-count')).toHaveText('0');
+  await expect(page.locator('.badge.expired')).toHaveCount(6);
+  await expect(page.locator('[data-mission-action]')).toHaveCount(0);
+  await expect(page.getByRole('link', { name: /View (task|opportunity)/ })).toHaveCount(0);
+  await page.getByLabel('Verification', { exact: true }).selectOption('verified');
+  await expect(page.locator('#result-count')).toHaveText('2 missions match · showing 2');
+});
+
+test('activation revalidates malformed expiry on a rendered action', async ({ page, context }) => {
+  await page.addInitScript(() => {
+    const parseJson = Response.prototype.json;
+    Response.prototype.json = async function () {
+      const value = await parseJson.call(this);
+      if (new URL(this.url).pathname.endsWith('/data/missions.json')) {
+        window.invalidateFirstExpiry = () => { value[0].expiresAt = '2027-02-29'; };
+      }
+      return value;
+    };
+  });
+  await loadMissions(page);
+  const action = firstCard(page).locator('[data-mission-action]');
+  await action.focus();
+  await page.evaluate(() => window.invalidateFirstExpiry());
+  const destinations = [];
+  context.on('request', request => {
+    if (request.url() === missions[0].url) destinations.push(request.url());
+  });
+  await page.keyboard.press('Enter');
+  await expect(firstCard(page).locator('.badge')).toHaveText('Expired');
+  await expect(action).toHaveCount(0);
+  await expect(firstCard(page).getByRole('heading')).toBeFocused();
+  expect(destinations).toEqual([]);
+});

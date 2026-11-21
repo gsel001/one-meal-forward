@@ -1,9 +1,16 @@
+export function utcDateStart(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return NaN;
+  const time = Date.parse(`${value}T00:00:00Z`);
+  // Reject dates that the parser rolls into the following month.
+  return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
+}
 export function expiryTime(mission) {
-  return Date.parse(`${mission.expiresAt}T00:00:00Z`) + 86400000;
+  return utcDateStart(mission.expiresAt) + 86400000;
 }
 export function effectiveStatus(mission, now = new Date()) {
   if (mission.example) return 'example';
-  if (now.getTime() >= expiryTime(mission)) return 'expired';
+  const expiry = expiryTime(mission);
+  if (!Number.isFinite(expiry) || now.getTime() >= expiry) return 'expired';
   return mission.status;
 }
 export function filterMissions(missions, filters, now = new Date()) {

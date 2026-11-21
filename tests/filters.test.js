@@ -21,3 +21,33 @@ test('expiry includes the final millisecond of the UTC day and changes at midnig
 });
 test('unsafe protocols and embedded credentials rejected',()=>{for(const value of ['javascript:alert(1)','data:text/html,hi','http://example.org','not a url','https://user:password@example.org'])assert.equal(safeUrl(value),null);assert.equal(safeUrl('https://example.org/'),'https://example.org/');});
 test('impact only counts reviewed evidence-linked contributions',()=>assert.equal(reviewedContributions({contributions:[{status:'reviewed',reviewer:'reviewer',evidence:'https://github.com/gsel001/one-meal-forward/pull/1'},{status:'pending',reviewer:'reviewer',evidence:'https://example.org'},{status:'reviewed',evidence:'https://example.org'}]}).length,1));
+
+test('malformed expiry fails closed without changing example status', () => {
+  const { expiresAt, ...missing } = base;
+  const malformed = [missing, ...[
+    null, '', 'not a date', '2027-02-29', '2028-02-30', '2027-04-31',
+    '2027-13-01', '2027-00-01', '2027-01-00', '2027-1-01',
+    '2027-01-01\n', '2027-01-01T00:00:00Z', 20270101, true, {},
+    ['2027-01-01'],
+  ].map(value => ({ ...base, expiresAt: value }))];
+  for (const mission of malformed) {
+    const label = JSON.stringify(mission.expiresAt);
+    assert.equal(effectiveStatus(mission, now), 'expired', label);
+    assert.equal(effectiveStatus({ ...mission, status: 'pending' }, now), 'expired', label);
+    assert.equal(effectiveStatus({ ...mission, example: true }, now), 'example', label);
+    assert.equal(filterMissions([mission], { status: 'verified' }, now).length, 0, label);
+  }
+});
+
+test('expiry rolls over at midnight UTC after a month or year ends', () => {
+  for (const [expiresAt, midnight] of [
+    ['2027-04-30', '2027-05-01T00:00:00Z'],
+    ['2027-12-31', '2028-01-01T00:00:00Z'],
+  ]) {
+    const mission = { ...base, expiresAt };
+    const boundary = new Date(midnight);
+    assert.equal(effectiveStatus(mission, new Date(boundary.getTime() - 1)), 'verified');
+    assert.equal(effectiveStatus(mission, boundary), 'expired');
+    assert.equal(effectiveStatus({ ...mission, status: 'expired' }, now), 'expired');
+  }
+});

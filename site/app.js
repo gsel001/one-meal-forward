@@ -52,9 +52,9 @@ try {
   function render() {
     const now = new Date();
     const focused = document.activeElement;
-    const focusedTitle = grid.contains(focused) ? focused.closest('.mission-card')?.querySelector('h3').id : null;
-    const focusedAction = focused.hasAttribute('data-mission-action');
-    const focusedHref = focused.getAttribute('href');
+    const focusedTitle = focused && grid.contains(focused) ? focused.closest('.mission-card')?.querySelector('h3')?.id : null;
+    const focusedAction = focused?.hasAttribute('data-mission-action');
+    const focusedHref = focused?.getAttribute('href');
     const filtered = filterMissions(missions, Object.fromEntries(new FormData(form)), now);
     grid.replaceChildren(...filtered.slice(0, limit).map(m => card(m, strings, now, render)));
     count.textContent = `${filtered.length} ${strings.results} · showing ${Math.min(limit, filtered.length)}`;
