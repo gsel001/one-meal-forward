@@ -1,24 +1,23 @@
 # Governance Roster and Current Status
 
-**Last verified:** 2026-11-21  
-**Status:** Factual single source of truth for current repository roles and verified GitHub permissions. Proposed governance changes remain unadopted unless explicitly recorded below.
+**GitHub access last verified:** 2026-11-23
 
-Current active governance remains [GOVERNANCE.md](../../GOVERNANCE.md).
+See [GOVERNANCE.md](../../GOVERNANCE.md) for stewardship and the [PR #54 decision record](https://github.com/gsel001/one-meal-forward/pull/54) for the effective status of shared governance.
 
 ## Active repository roles
 
 | Person | Verified GitHub access | Scope and record |
 | --- | --- | --- |
-| [`@gsel001`](https://github.com/gsel001) | Repository owner (personal GitHub account) and Code Owner (`.github/CODEOWNERS`) | Founder; current project steward under [GOVERNANCE.md](../../GOVERNANCE.md). Cannot self-approve pull requests on protected `main`. |
-| [`@Elizabethjulie`](https://github.com/Elizabethjulie) | Repository collaborator (`write`) and Code Owner (`.github/CODEOWNERS`) | Added with explicit consent in [PR #53](https://github.com/gsel001/one-meal-forward/pull/53) to enable non-author code-owner review on protected `main`. |
+| [`@gsel001`](https://github.com/gsel001) | Repository owner (personal GitHub account) and Code Owner (`.github/CODEOWNERS`) | Founder. Cannot self-approve pull requests on protected `main`. |
+| [`@Elizabethjulie`](https://github.com/Elizabethjulie) | Repository collaborator (`write`) and Code Owner (`.github/CODEOWNERS`) | Accepted the Founding Maintainer role in [PR #51](https://github.com/gsel001/one-meal-forward/pull/51#issuecomment-7019012893). Added to `CODEOWNERS` with explicit consent in [PR #53](https://github.com/gsel001/one-meal-forward/pull/53) to enable non-author code-owner review on protected `main`. |
 
-## Proposed or not established
+## Adoption and implementation
 
 | Item | Status | Notes |
 | --- | --- | --- |
-| Equal Founding Partnership | **Discussion draft; not adopted** | Proposed in [FOUNDING_PARTNERSHIP.md](FOUNDING_PARTNERSHIP.md) ([PR #54](https://github.com/gsel001/one-meal-forward/pull/54)). |
+| Project Co-Owners | **Effective only upon recorded adoption** | Founder and Founding Maintainer would share project governance under the [founding partnership](FOUNDING_PARTNERSHIP.md#10-formalization-and-adoption). See [PR #54](https://github.com/gsel001/one-meal-forward/pull/54) for the decision and effective date. |
 | Broader Charter / Advisory Council / Appeals Panel | **Not established** | Reference draft in [PR #51](https://github.com/gsel001/one-meal-forward/pull/51); revisit when growth triggers are met. |
-| GitHub organization / transfer plan | **Not established** | Repository currently resides on `@gsel001`'s personal GitHub account. |
+| GitHub organization ownership | **Not implemented** | The repository resides on `@gsel001`'s personal GitHub account. The proposed destination is a project organization with both people as organization owners, subject to separate authorization and verification. |
 | Registered nonprofit / funding accounts | **Not established** | No donations, fundraising accounts, or expenditures are authorized. |
 | Verified food-relief organization partner | **None verified** | Organization listings require authorization and review under [docs/verification.md](../verification.md). |
 

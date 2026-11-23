@@ -1,10 +1,12 @@
 # Founding partnership and shared governance
 
-**Version:** 0.1  
-**Date:** 2026-11-21  
-**Status:** Discussion draft; not adopted.
+**Version:** 0.2
 
-This is an invitation to develop a lightweight founding partnership together. It proposes equal project leadership for two consenting founding partners; it does not announce an appointment, establish legal or financial ownership, grant GitHub permissions, or supersede [current governance](../../GOVERNANCE.md). The broader proposal in [PR #51](https://github.com/gsel001/one-meal-forward/pull/51) remains a reference for discussion.
+**Revised:** 2026-11-23
+
+**Adoption:** See the requirements and decision record in [§10](#10-formalization-and-adoption).
+
+This agreement sets out how the Founder and Founding Maintainer would serve together as Co-Owners of OneMealForward upon adoption. Co-Owner is the project governance role defined here. GitHub administrative privileges, legal ownership and financial arrangements require separate decisions under [§10](#10-formalization-and-adoption). The broader proposal in [PR #51](https://github.com/gsel001/one-meal-forward/pull/51) remains a reference for discussion.
 
 ## 1. Our purpose
 
@@ -12,9 +14,9 @@ OneMealForward is an independent, open-source volunteer initiative to help fight
 
 ## 2. Founding partnership
 
-Proposed: the Founder and Founding Maintainer, if both explicitly agree, would have equal standing and equal (50/50) authority over reserved project decisions. Their distinct titles recognize their historical contributions, not a hierarchy. Historical recognition does not confer immunity from accountability. Neither partner is subordinate to the other.
+Upon adoption, the Founder and Founding Maintainer each serve as a project Co-Owner, with equal standing and equal (50/50) authority over reserved project decisions. The Founder and Founding Maintainer designations continue to recognize each person's historical contribution. Both Co-Owners are accountable under the same rules.
 
-Equal leadership is a proposal, not a division of equity, intellectual property, revenue or legal title. Any such arrangements must be addressed separately.
+Equal leadership governs project decisions. Equity, intellectual property, revenue and legal title require separate arrangements.
 
 ## 3. Decisions and responsibilities
 
@@ -97,7 +99,11 @@ Before any organization creation, repository transfer or expansion of administra
 
 GitHub organization ownership is an administrative role, not proof of equal equity or legal ownership; this draft does not guarantee a technically enforced mutual veto.
 
-Both founding participants may lead proposals, request changes and revise this text freely. Neither is expected to simply endorse the other's draft. Before adoption, reconcile the final agreement with [current governance](../../GOVERNANCE.md) and maintain live role and access facts in one dated roster ([docs/governance/ROSTER.md](ROSTER.md)) rather than duplicating them across multiple documents. Follow existing public consultation and review requirements, including the normal seven-day feedback period for substantial policy changes. Record explicit mutual agreement and applicable independent review; no automatic adoption or merge.
+Both founding participants may lead proposals, request changes and revise this text freely. Neither is expected to simply endorse the other's draft.
+
+Before adoption, allow at least seven days for public feedback under [GOVERNANCE.md](../../GOVERNANCE.md), address substantive feedback, and record the consultation closeout on [PR #54](https://github.com/gsel001/one-meal-forward/pull/54). Both people must give explicit written agreement to the Co-Owner designation and the same final revision, including consent to public recognition. Record that agreement on the PR without disclosing private correspondence. Obtain the applicable eligible human approval, resolve required review threads and verify required checks on the final revision.
+
+The project Co-Owner role and reserved decision rules take effect when the agreed revision is merged into `main` after these gates are met. The existing stewardship model applies until then. Record the adoption date and revision with the decision, and maintain the dated [governance roster](ROSTER.md) as the record of roles and verified access. Organization creation, repository transfer or any administrative role change requires a separate written decision from both people.
 
 Revisit broader community governance (using [PR #51](https://github.com/gsel001/one-meal-forward/pull/51) as a reference) when clear growth triggers are met—such as reaching five or more active contributors, before creating a GitHub organization, or before accepting funding. After adoption, amendments require the same mutual consent and applicable review. Keep the agreement proportionate to the project's size.
 
