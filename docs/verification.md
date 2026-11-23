@@ -8,6 +8,19 @@
 - **Expired:** expiry has passed or review has been revoked; no recruitment action is shown. Dates are interpreted as end-of-day UTC.
 - **Example:** synthetic test fixtures only. The build rejects examples in published mission data.
 
+An expiry date remains valid through its entire UTC day, including the final
+millisecond; it expires at 00:00:00 UTC the next day. The board refreshes at that
+boundary and when a tab becomes visible or a page is restored. Recruitment links
+also recheck `effectiveStatus()` on activation, including keyboard and middle-click,
+so a delayed background timer cannot authorize an expired action. Refreshes retain
+filters and pagination, update counts, and preserve focus where possible.
+
+These checks use the browser's clock and the mission data loaded with the page.
+They cannot independently detect organization consent revocation or GitHub issue
+closure, nor fetch later corrections to the static catalogue. Such changes require
+maintainer review and an updated deployment; an already-open tab needs to reload
+to receive the new data. Client-side expiry is not proof of current consent.
+
 ## Organization checklist
 
 1. Review the issue for personal information before doing anything else. Remove sensitive content using GitHub procedures and avoid copying it into Git.
