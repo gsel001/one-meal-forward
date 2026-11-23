@@ -1,0 +1,5 @@
+# Public static launch site: no user accounts or protected pages.
+User-agent: *
+Allow: /
+
+Sitemap: https://gsel001.github.io/one-meal-forward/sitemap.xml
